@@ -1,0 +1,670 @@
+/*se carga en views/layouts/app.blade.php*/
+/*css para estylos de Profile*/
+
+@font-face {
+font-family: cinzelbold;
+src: url(../fonts/cinzelbold.ttf);
+}
+@font-face {
+font-family: cinzelregular;
+src: url(../fonts/cinzelregular.ttf);
+}
+@font-face {
+font-family: frederick;
+src: url(../fonts/frederick.ttf);
+}
+@font-face {
+font-family: grupporegular;
+src: url(../fonts/grupporegular.ttf);
+}
+@font-face {
+font-family: racingsansoneregular;
+src: url(../fonts/racingsansoneregular.ttf);
+}
+@font-face {
+font-family: shadowsIntolighttworegular;
+src: url(../fonts/shadowsIntolighttworegular.ttf);
+}
+
+*{
+    /*background: #18191a;*/
+    background: black;
+    color: white;
+    font-family: grupporegular;
+}
+
+
+
+nav{
+    background: black !important;
+    color: #22f1f4 !important;
+}
+nav a{
+    background: black !important;
+    color: #22f1f4 !important;
+    font-weight: bolder !important;
+    font-size: 18px !important;
+}
+
+.form-general{
+    padding-bottom: 10px;
+    background: #242526;
+    color: white;
+    width: 100%;
+    min-width: 300px;
+    margin: 0px auto;
+    /*border: 1px solid red;*/
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.create-form, .createtitle{
+    width: 30%; 
+    min-width: 350px;
+    margin: 20px auto; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: #22f1f4; 
+    /*border: 1px solid red;*/
+}
+
+
+
+
+
+.image-form{
+    width: 50%; 
+    min-width: 350px;
+    margin: 20px auto; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    /*border: 1px solid red;*/
+}
+
+.image-form:hover{
+    
+    box-shadow: 0px 0px 15px 10px #660000;
+   
+}
+
+.edittitle{
+    width: 50%; 
+    min-width: 350px;
+    margin: 20px auto; 
+    height: 20px;
+    font-size: 18px;
+    color: #22f1f4;
+}
+
+.form-control{
+    
+    width: 100%;
+}
+
+#image_path{
+    background: #242526;
+}
+
+
+form{
+    background: #242526;
+    color: white;
+
+}
+.button-comments{
+    background: orangered;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px; 
+    padding: 3px 5px;
+    margin-left: 0px;
+}
+    
+.commentp{
+    margin-left: 30px;
+}
+
+.deletecomment{
+    width: 60px;
+    color: red;
+    position: relative;
+    top: 0px;
+}
+.deletecomment:hover{
+    text-shadow: 0px 0px 10px red;
+    top: -3px;
+}
+.deletecomment:active{
+    top: -1px;
+}
+
+.updateText{
+    width: 60px;
+    color: #22f1f4;
+    position: relative;
+    top: 0px;
+}
+.updateText:hover{
+    text-shadow: 0px 0px 10px #22f1f4;
+    top: -3px;
+}
+.updateText:active{
+    top: -1px;
+}
+
+
+
+.warn-green{
+    margin-top: 3px;
+    color: green;
+}
+.warn-red{
+    margin-top: 3px;
+    color: red;
+}
+
+.is-invalid{
+    color: red;
+    border: 2px solid red;
+}
+
+
+.cardcontainer{
+    /*border: 1px solid red;*/
+    width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    background: #242526;
+    overflow: hidden;
+    
+}
+
+.cardcontainer:hover, .bxShadow:hover{
+    box-shadow: 0px 0px 15px 10px #660000;
+    
+    
+}
+
+.cardcontainerInd{
+    width: 800px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background: #242526;
+    border-radius: 10px;
+}
+
+
+
+.cardtop{
+    /*border: 1px solid red;*/
+    background: #242526;
+    color: white;
+}
+
+.cardtop, 
+.cardbottom{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background: #242526;
+    
+}
+
+.cardbottom{
+    width: 100%;
+    background: #242526;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 10px
+}
+
+hr{
+    border: 1px solid #660033;
+}
+
+.usercard{
+    margin-left: 10px;
+    background: #242526;
+}
+
+.usercardcont{
+    color: white;
+    background: #242526;
+}
+
+.text-sm usercard{
+    margin-left: 10px;
+}
+
+.nickname{
+   
+    margin-left: 5px;
+    color: white;
+    background: #242526;
+}
+
+.mainimage{
+    width: 100%;
+    max-height: 600px;
+    
+}
+
+.mainimageInd{
+    height: auto;
+}
+
+.paginate{
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.btncard{
+   width: 300px;
+   height: 30px;
+/*   border: 1px solid red;*/
+   margin-top: 5px;
+   margin-left: 10px;
+   background: #242526;
+}
+
+.btn{
+       
+    border-radius: 5px;
+    padding: 4px 5px;
+}
+
+.btn-comments, 
+.vpbtn, 
+.button-image-form, 
+label[for="image_path"],
+#search{
+    
+    margin-top: 10px;
+    border-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #242526;
+    color: #22f1f4;
+    border-left: 5px solid #660033;
+    border-top: 1px solid #660033;
+    border-bottom: 1px solid #660033;
+    border-right: 1px solid #660033;
+    position: relative;
+    top: 0px;
+    outline-style: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+}
+
+#buscador{
+    background: black;
+}
+
+.button-image-form{
+    margin-left: 30px;
+}
+
+.btn-comments:hover, 
+.vpbtn:hover, 
+.button-image-form:hover,
+label[for="image_path"]:hover{
+    border-left: 5px solid red;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+    background: #660033;
+    color: white;
+    outline-style: none;
+    box-shadow: 0px 0px 10px #22f1f4;
+    top: -2px;
+    
+}
+
+.btn-comments:active, 
+.vpbtn:active, 
+.button-image-form:active,
+label[for="image_path"]:active{
+    top: 3px;
+    outline-style: none;
+    box-shadow: 0px 0px 5px #22f1f4;
+}
+
+.mainText{
+    color: #22f1f4;
+    font-weight: bolder;
+}
+
+.cardheart{
+    
+    display: block;
+    padding-top: 10px;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 10px;
+    /*border: 1px solid red;*/
+    
+}
+
+.counterlikes{
+    width: 64px;
+    float: left;
+    font-size: 13px;
+    text-align: right;
+    background: #242526;
+    /*border: 1px solid red;*/
+
+}
+
+.heartlike{
+    
+    display: block;
+    width:100px;
+    float: right;
+    margin-right: 10px;
+    background: #242526;
+    /*border: 1px solid red;*/
+
+        
+}
+
+.btn-dislike, .btn-like{
+    width: 30px;
+    float: right;
+    background: #242526;
+    position: relative;
+    top: 0px;
+}
+
+.btn-dislike:hover, .btn-like:hover{
+    width: 33px;
+}
+
+.btn-dislike:active, .btn-like:active{
+    top: 3px;
+}
+
+.titledescription{
+    margin-left: 20px;
+    background: #242526;
+    color: white;
+/*    border: 1px solid red;*/
+}
+
+.comentscontent{
+    background: #242526;
+    color: white;
+}
+
+.descriptioncard{
+    width: 500px;
+    margin: 0px auto;
+    text-align: justify;
+    background: #242526;
+    color: white;
+    /*border: 1px solid red;*/
+
+}
+
+.members{
+    background: #242526;
+    color: white;
+}
+
+.commentscard{
+    padding: 20px;
+    background: #242526;
+    color: white;
+}
+.commentscard h2{
+    background: #242526;
+    color: white;
+}
+
+h3, .ptextarea, .uploadform{
+    background: #242526;
+    color: white;
+}
+
+.ptextarea{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.edittext{
+    width: 80%;
+    /*border: 1px solid red;*/
+    background: #242526;
+}
+
+.form-control{
+    color: white;
+    border: 3px solid #3333;
+    border-radius: 5px;
+    
+}
+
+svg{
+    background: transparent;
+}
+
+#description{
+    width: 90%;
+    height: 150px;
+    text-align: left;
+    margin: auto;
+}
+
+.element{
+    margin: 5px auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.titlefavs{
+    width: 600px;
+    /*border: 1px solid red;*/
+    margin: 0px auto;
+    font-size: 30px;
+    margin-top: 20px;
+    
+}
+.profile-user{
+    width: 600px;
+    height: content-box;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid red;*/
+}
+
+.profile-user .container-avatar{
+    width: 150px;
+    max-height: 200px;
+    border-radius: 10px;
+    /*border: 1px solid red;*/
+    overflow: hidden;
+    float: left;
+   
+}
+
+.profile-user .container-avatar img{
+    width: 100%;
+    
+    margin: auto;
+}    
+
+.clearfix{
+  clear: both;
+}
+
+.profile-user .user-info{
+    float: left;
+    padding-left: 10px;
+}
+
+
+.cardgen{
+    width: 800px;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+.secc2{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.secc1, .secc2, .secc3{
+    display: block;
+    
+    width: 100%;
+    background: #242526;
+}
+
+.secc2{
+    width: 800px !important;
+    background: #242526;
+}
+.secc3{
+    /*border: 1px solid red;*/
+    height: 45px;
+    padding-top: 10px;
+    background: #242526;
+}
+
+.usercardind{
+/*    border: 1px solid red;*/
+    float: left;
+    margin-top: 10px;
+    background: #242526;
+    
+}
+
+.imgindcard{
+    float: left;
+    margin: 10px;
+}
+
+.cardcont{
+    margin-bottom: 50px;
+}
+
+
+.busqueda{
+    width: 800px;
+    margin: 20px auto;
+/*    border: 1px solid red;*/
+}
+
+.titleg{
+    width: 100px;
+    font-size: 30px;
+    float: left;
+/*    border: 1px solid red;*/
+}
+
+.formsrch{
+    float: right;
+/*     border: 1px solid red;*/
+}
+
+.buttonsrch{
+    float: right;
+    margin: 5px 0px;
+}
+
+.btncont{
+   float: left;
+   margin-top: 15px;
+   
+   
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background: #2c2b2b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #990202;
+  border-radius: 20px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+  border-radius: 20px;
+  width: 10px;
+}
+
+
+input[type=file]#image_path {
+ width: 0.1px;
+ height: 0.1px;
+ opacity: 0;
+ overflow: hidden;
+ position: absolute;
+ z-index: -1;
+ }
+ 
+ label[for="image_path"] {
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+    color: #22f1f4;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 15px !important;
+    width: fit-content;
+    text-align: center;
+    
+    
+    
+    
+    
+ }
+ 
+ .indicador{
+     overflow: hidden;
+     width: 150px;
+     max-width: 200px;
+     margin: 0px auto;
+     background: transparent;
+ }
+ 
+ 
+ .uploadbutton{
+     width: fit-content;
+     display: flex;
+     flex-direction: column;
+     margin: 10px auto;
+     text-align: center;
+ }
+ 
+ 
+ .login-nav{
+     width: 100%;
+     height: 100px;
+     /*border: 1px solid red;*/
+     color: red;
+     background: black !important;
+ }
+ 
