@@ -16,7 +16,7 @@
                 </div>
                 -->
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="textlogo">
                     
                     <x-jet-nav-link href="{{ route('home.redirect') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Pic n Share') }}
@@ -145,9 +145,24 @@
 
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
+                
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
+                
+                <x-jet-responsive-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('profile.show')">
+                    {{ __('Gente') }}
+                </x-jet-responsive-nav-link>
+                <x-jet-responsive-nav-link href="{{ route('likes') }}" :active="request()->routeIs('profile.show')">
+                    {{ __('Favoritas') }}
+                </x-jet-responsive-nav-link>
+                <x-jet-responsive-nav-link href="{{ route('profile',['id' => Auth::user()->id]) }}" :active="request()->routeIs('profile.show')">
+                    {{ __('Mis Publicaciones') }}
+                </x-jet-responsive-nav-link>
+                <x-jet-responsive-nav-link href="{{ route('image.create') }}" :active="request()->routeIs('profile.show')">
+                    {{ __('Subir Imagen') }}
+                </x-jet-responsive-nav-link>
+                
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                     <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">

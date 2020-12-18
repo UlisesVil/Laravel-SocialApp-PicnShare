@@ -10,6 +10,8 @@
             <h1>Mis Favoritas</h1>
         </div>
         
+        
+        
         @foreach($likes as $like)
             @include('includes.image',['image'=>$like->image])
         @endforeach

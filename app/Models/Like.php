@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Like extends Model
 {
     use HasFactory;
-    
+    protected $table= 'likes';
     //En la plantilla detail.blade.php  y home.blade.php se usa 
     //@if($like->user->id == Auth::user()->id) pero no funcionara 
     //por que se necesita las siguientes lineas de Relacion Many to One 

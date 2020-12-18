@@ -95,5 +95,5 @@
         </x-jet-button>
     </x-slot>
 </x-jet-form-section>
-{{var_dump($this->user->profile_photo_url)}}
-{{var_dump($this->user->profile_photo_path)}}
+<!--{{var_dump($this->user->profile_photo_url)}}
+{{var_dump($this->user->profile_photo_path)}}-->

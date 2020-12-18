@@ -668,3 +668,19 @@ input[type=file]#image_path {
      background: black !important;
  }
  
+ .formjetprof{
+     background: black;
+     border: 1px solid white;
+     color: white;
+     overflow: hidden;
+     border-radius: 10px;
+ }
+ 
+ .textinput{
+     color: black;
+     font-weight: bolder;
+ }
+ 
+ .textlogo{
+     padding-top: 17px;
+ }
