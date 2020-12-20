@@ -25,7 +25,10 @@
 
             <div class="profile-user">
                 <div class="container-avatar">
-                    <img class="" src="{{$user->profile_photo_url}}" alt="{{$user->name}}" title="{{'@'.$user->nick}}" />
+                    <img class="" src="{{url('/user/avatar/'.$user->profile_photo_path)}}" alt="{{$user->name}}" title="{{'@'.$user->nick}}" />
+                  
+                   
+                   
                 </div>
 
                 <div class="user-info">

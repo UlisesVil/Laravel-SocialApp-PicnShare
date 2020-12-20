@@ -51,7 +51,17 @@ nav a{
     background: #242526;
     color: white;
     width: 100%;
-    min-width: 300px;
+    margin: 0px auto;
+    /*border: 1px solid red;*/
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-userimage{
+    padding-bottom: 10px;
+    background: black;
+    color: white;
+    width: 100%;
     margin: 0px auto;
     /*border: 1px solid red;*/
     border-radius: 10px;
@@ -82,12 +92,22 @@ nav a{
     border-radius: 10px;
     /*border: 1px solid red;*/
 }
-
 .image-form:hover{
-    
-    box-shadow: 0px 0px 15px 10px #660000;
-   
+   box-shadow: 0px 0px 15px 10px #660000;
 }
+
+.imageuser-form{
+    width: 50%; 
+    min-width: 350px;
+    margin: 20px auto; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: black;
+    /*border: 1px solid red;*/
+}
+
+
 
 .edittitle{
     width: 50%; 
@@ -307,6 +327,17 @@ label[for="image_path"],
 
 .button-image-form{
     margin-left: 30px;
+}
+.btncontent{
+    display: flex;
+    flex-direction: column;
+}
+.btnuserimg{
+    margin: 10px auto 20px;
+}
+.imgusercontent{
+    width: 100%;
+    border-radius: 10px;
 }
 
 .btn-comments:hover, 
@@ -683,4 +714,18 @@ input[type=file]#image_path {
  
  .textlogo{
      padding-top: 17px;
+ }
+
+ 
+ .imgsuser{
+     display: flex;
+     width: 800px;
+     height: 300px;
+     border: 1px solid green;
+     margin-top: 400px;
+ }
+ 
+ .btnprof{
+    margin-left: 0px !important;
+    margin-top: 20px;
  }

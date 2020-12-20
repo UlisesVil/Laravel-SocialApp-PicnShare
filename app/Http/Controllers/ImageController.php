@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\File;
 use App\Models\Image;
 use App\Models\Comment;
 use App\Models\Like;
+use App\Models\User;
 
 class ImageController extends Controller
 {
@@ -161,4 +162,46 @@ class ImageController extends Controller
                          ->with(['message' => 'Imagen actualizada con exito']);
        
     }
+    
+    
+    public function imguser(){
+        return view('image.userimage');
+    }
+    
+    public function updateuserimg(Request $request){
+        $id = \Auth::user()->id;
+        $user = User::find($id);
+        $user_profile_photo=$user->profile_photo_path;
+        var_dump($user_profile_photo);
+        
+        //Recoger los datos
+        $image_path = $request->file('image_path');
+        if($image_path){
+            $image_path_name = time().$image_path->getClientOriginalName();
+            Storage::disk('userimages')->put($image_path_name, File::get($image_path));
+            var_dump($image_path_name);
+            $user->profile_photo_path = $image_path_name;
+        }
+        
+        $user->update();
+        //var_dump($id);
+        //var_dump($image_id);
+        //var_dump($image_path);
+        //die();
+        
+        return redirect()->route('image.userimage');
+    }
+    
+      public function getUserImage($filename){
+        //agregamos el use Illuminate\Http\Response; al principio del archivo
+        //y creamos su ruta en archivo routes/web 
+        $file = Storage::disk('userimages')->get($filename);
+        return new Response($file, 200);
+    }
+    
+    public function profileview(){
+        return view('profile.update-profile-information-form');
+    }
+    
+    
 }

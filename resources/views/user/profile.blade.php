@@ -7,7 +7,8 @@
     
     <div class="profile-user">
         <div class="container-avatar">
-            <img class="" src="<?php echo e($user->profile_photo_url); ?>" alt="<?php echo e(Auth::user()->name); ?>" />
+            <img class="" src="{{route('user.avatar',['filename'=>$user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
+            
         </div>
         
         <div class="user-info">

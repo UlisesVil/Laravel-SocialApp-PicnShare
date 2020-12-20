@@ -1,5 +1,5 @@
 <x-jet-form-section submit="updateProfileInformation">
-    
+     
     <x-slot name="title">
          <div style="color: white; font-weight: bolder">
         {{ __('Profile Information') }}
@@ -11,8 +11,12 @@
         {{ __('Update your account\'s profile information and email address.') }}
         </div>
     </x-slot>
-
+     
+  
+   
+    
     <x-slot name="form">
+         
         <!-- Profile Photo -->
         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
             <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 sm:col-span-4">
@@ -40,6 +44,8 @@
                           x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
                     </span>
                 </div>
+                
+                
 
                 <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('Select A New Photo') }}
@@ -54,7 +60,20 @@
                 <x-jet-input-error for="photo" class="mt-2" />
             </div>
         @endif
-
+        
+        
+        <div class="col-span-6 sm:col-span-4">
+            @if(Auth::user()->profile_photo_path)
+                <img src="{{route('user.avatar',['filename'=>Auth::user()->profile_photo_path])}}" style="width: 150px; margin-bottom: 20px" />
+                <!--src="{{url('/user/avatar/'.Auth::user()->profile_photo_path)}}"-->
+            @endif
+        
+            <a class="vpbtn" href="{{ route('image.userimage') }}">Select a New Photo</a>
+           
+        </div>
+        
+   
+        
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="name" value="{{ __('Name') }}" />

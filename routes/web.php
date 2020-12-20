@@ -81,6 +81,10 @@ Route::get('/home', function () {
 Route::get('/perfil/{id}','App\Http\Controllers\HomeController@profile')->name('profile');
 Route::get('/gente/{search?}','App\Http\Controllers\HomeController@index')->name('user.index');
 //{search?} con el signo ? quiere decir que es opcional
+Route::get('/imageuser', 'App\Http\Controllers\ImageController@imguser')->name('image.userimage');
+Route::post('/imguser/update', 'App\Http\Controllers\ImageController@updateuserimg')->name('user.userimage');
+Route::get('/user/avatar/{filename}', 'App\Http\Controllers\ImageController@getUserImage')->name('user.avatar');
+Route::get('/profileview', 'App\Http\Controllers\ImageController@profileview')->name('profile.update-profile-information-form');
 
 //IMAGE
 Route::get('/subir-imagen','App\Http\Controllers\ImageController@create')->name('image.create');

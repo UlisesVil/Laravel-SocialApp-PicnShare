@@ -10,7 +10,7 @@
 
         <div class="cardgen cardcontainerInd bxShadow">
             <div class="secc1">
-                <img class="h-10 w-10 rounded-full object-cover imgindcard" src="<?php echo e($image->user->profile_photo_url); ?>" alt="<?php echo e(Auth::user()->name); ?>" />
+                <img class="h-10 w-10 rounded-full object-cover imgindcard" src="{{route('user.avatar',['filename'=>$image->user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
                 <div class="text-sm usercardind">
                     <p class="mainText leading-none usercardcont">{{$image->user->name.' '.$image->user->surname}}
                         <span class="mainText leading-none nickname">
