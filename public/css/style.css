@@ -84,7 +84,7 @@ nav a{
 
 
 .image-form{
-    width: 50%; 
+    width: 800px; 
     min-width: 350px;
     margin: 20px auto; 
     display: flex;
@@ -208,15 +208,17 @@ form{
 }
 
 .cardcontainerInd{
-    width: 800px;
+    width: 100%;
     margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 10px;
     background: #242526;
     border-radius: 10px;
 }
 
+.cardcontainerIndbottom{
+    width: 100%;
+    margin: 5px auto;
+}
 
 
 .cardtop{
@@ -240,6 +242,11 @@ form{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding-right: 10px
+}
+
+.cardbottomind{
+    width: 100%;
+    padding: 10px;
 }
 
 hr{
@@ -280,6 +287,7 @@ hr{
 .paginate{
     max-width: 600px;
     margin: 30px auto;
+    padding: 2px 30px;
 }
 
 .btncard{
@@ -363,6 +371,14 @@ label[for="image_path"]:active{
     top: 3px;
     outline-style: none;
     box-shadow: 0px 0px 5px #22f1f4;
+}
+
+.btnerase{
+    margin-right: 40px;
+    padding: 4px 20px;
+    font-weight: bolder;
+    color: red;
+    border-color: red;
 }
 
 .mainText{
@@ -562,7 +578,7 @@ svg{
 }
 
 .secc2{
-    width: 800px !important;
+    width: 100%;
     background: #242526;
 }
 .secc3{
@@ -614,7 +630,7 @@ svg{
 }
 
 .btncont{
-   float: left;
+   float: right;
    margin-top: 15px;
    
    
@@ -728,4 +744,111 @@ input[type=file]#image_path {
  .btnprof{
     margin-left: 0px !important;
     margin-top: 20px;
+ }
+ 
+ 
+  @media screen and (max-width: 830px){
+     .secc2{
+         width: 100%;
+     
+     }
+     
+     .cardcontainerInd,
+     .image-form,
+     .busqueda{
+         width: 90%;
+     }
+     
+     .cardbottom{
+         width: 90% !important;
+         margin: 0px;
+     }
+     
+     .descriptioncard{
+         width: 100%;
+     }
+     
+     
+     
+ }
+ 
+ @media screen and (max-width: 640px){
+     
+     .cardcontainer, 
+     .cardcontainerInd,
+     .profile-user,
+     .titlefavs{
+         width: 90%;
+     }
+     
+     .btncont{
+        float: none;
+        margin-left: 10px;
+   
+   
+    }
+    .userprof{
+        display: flex;
+        flex-flow: column;
+    }
+     
+ }
+ 
+ 
+ @media screen and (max-width: 470px){
+     .imageuser-form{
+         width: 300px;
+     }
+     .form-userimage{
+         width: 300px;
+     }
+ }
+ 
+ @media screen and (max-width: 300px){
+     
+     
+    .profile-user{
+        display: flex;
+        flex-direction: column;
+    }
+    
+     .userprof{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .erasebtns{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+    }
+    
+    .btnerase{
+        padding: 5px 40px;
+        margin: 20px 0px;
+        margin-top: 20px;
+    }
+     
+    .btnnoterase{
+        margin-top: 20px;
+    }
+    
+    .secc3{
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .heartlike{
+        width: 100%;
+    }
+    .counterlikes{
+        float: right;
+        width: 10px;
+        margin-right: 10px;
+    }
+    
+    .login-nav{
+        width: 124%;
+    }
  }

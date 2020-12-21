@@ -7,7 +7,15 @@
     
     <div class="profile-user">
         <div class="container-avatar">
-            <img class="" src="{{route('user.avatar',['filename'=>$user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
+           
+            
+            @if($user->profile_photo_path)
+                           <img class="" src="{{route('user.avatar',['filename'=>$user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
+                        @else
+                            <img class="" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" />
+                        @endif
+            
+            
             
         </div>
         

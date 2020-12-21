@@ -23,9 +23,9 @@
   
   <!--Modal-->
   <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
-    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-100"></div>
     
-    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+    <div class="modal-container bg-black w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
       
       <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
         <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
@@ -55,10 +55,12 @@
 
         <!--Footer-->
         <div class="flex justify-end pt-2">
-          <button class="modal-close px-4 py-1 bg-red-500 p-1 rounded-lg mr-3 text-white hover:bg-red-400">
-          <a href="{{ route('image.delete', ['id'=> $image->id]) }}" class="btn btn-danger">Si... Borrar</a>    
+            <div class="erasebtns">
+          <button class="">
+          <a href="{{ route('image.delete', ['id'=> $image->id]) }}" class="vpbtn btnerase">Si... Borrar</a>    
           </button>
-          <button class="modal-close px-4 py-1 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Cancelar</button>
+          <button class="modal-close vpbtn btnnoterase">Mejor No</button>
+          </div>
         </div>
         
       </div>

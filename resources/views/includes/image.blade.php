@@ -1,6 +1,20 @@
 <div class="max-w-sm lg:max-w-full lg:flex cardcontainer">
                 <div class="flex items-center bg-black pt-4 cardtop">
-                    <img class="h-10 w-10 rounded-full object-cover" src="{{route('user.avatar',['filename'=>$image->user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
+                    
+                    
+                   
+                    
+                    
+                    @if($image->user->profile_photo_path)
+                             <img class="h-10 w-10 rounded-full object-cover" src="{{route('user.avatar',['filename'=>$image->user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
+                        @else
+                            <img class="h-10 w-10 rounded-full" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" />
+                        @endif
+                    
+                    
+                    
+                    
+                    
                     <div class="text-sm usercard">
                         <a class="usercardcont mainText" href="{{route('profile',['id'=>$image->user->id])}}">
                             <p class="mainText leading-none usercardcont">{{$image->user->name.' '.$image->user->surname}}

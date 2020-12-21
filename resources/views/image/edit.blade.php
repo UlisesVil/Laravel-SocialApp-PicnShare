@@ -51,7 +51,7 @@
                         <label class=" ptextarea {{$errors->has('content') ? 'is-invalid' : ''}}" for="description">
                             Describe tu Imagen o Comenta algo:
                         </label>
-                        <textarea  id="description" name="description" class="shadow appearance-none border rounded py-2 text-gray-700 focus:outline-none focus:shadow-outline form-control" placeholder="Descripcion" required>
+                        <textarea  id="description" name="description" class="form-control" placeholder="Descripcion" required>
                             {{$image->description}}
                         </textarea>
                     </div>

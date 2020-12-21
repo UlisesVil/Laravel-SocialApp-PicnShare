@@ -9,8 +9,21 @@
         @include('includes.message')
 
         <div class="cardgen cardcontainerInd bxShadow">
+            
             <div class="secc1">
-                <img class="h-10 w-10 rounded-full object-cover imgindcard" src="{{route('user.avatar',['filename'=>$image->user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
+                
+                
+                            
+                   
+              @if($image->user->profile_photo_path)
+                            <img class="h-10 w-10 rounded-full object-cover imgindcard" src="{{route('user.avatar',['filename'=>$image->user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
+                        @else
+                            <img class="h-10 w-10 rounded-full object-cover imgindcard" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" />
+                        @endif              
+                            
+                            
+                            
+                        
                 <div class="text-sm usercardind">
                     <p class="mainText leading-none usercardcont">{{$image->user->name.' '.$image->user->surname}}
                         <span class="mainText leading-none nickname">
@@ -52,8 +65,8 @@
                 </div>
             </div>
 
-            <div class="max-w-sm lg:max-w-full lg:flex cardcontainerInd uploadform">
-                <div class="flex flex-col justify-between cardbottom uploadform">
+            <div class="cardcontainerIndbottom">
+                <div class="flex flex-col justify-between cardbottomind uploadform">
 
                     <div class="mb-8 comentscontent">
                        
