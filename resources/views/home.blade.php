@@ -7,11 +7,9 @@
     
     <div>
         @include('includes.message')
-        
+    
         @foreach($images as $image)
-
-        @include('includes.image',['image'=>$image])
-
+            @include('includes.image',['image'=>$image])
         @endforeach
     </div>
     

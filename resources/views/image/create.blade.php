@@ -42,8 +42,7 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2 uploadform {{$errors->has('content') ? 'is-invalid' : ''}}" for="description">
                         Describe tu Imagen o Comenta algo:
                     </label>
-                    <textarea  id="description" name="description" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control" placeholder="Descripcion" required>
-                    </textarea>
+                    <textarea  id="description" name="description" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control" placeholder="Descripcion" required></textarea>
                 </div>
 
                 <div class="mt-2 element warn">

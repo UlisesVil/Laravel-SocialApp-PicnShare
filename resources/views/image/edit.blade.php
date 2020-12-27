@@ -41,9 +41,7 @@
                     <label class=" ptextarea {{$errors->has('content') ? 'is-invalid' : ''}}" for="description">
                         Describe tu Imagen o Comenta algo:
                     </label>
-                    <textarea  id="description" name="description" class="form-control" placeholder="Descripcion" required>
-                        {{$image->description}}
-                    </textarea>
+                    <textarea  id="description" name="description" class="form-control" placeholder="Descripcion" required>{{$image->description}}</textarea>
                 </div>
 
                 <div class="mt-2 element warn">

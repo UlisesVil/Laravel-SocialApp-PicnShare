@@ -82,8 +82,7 @@
                             @csrf
                             <input type="hidden" name="image_id" value="{{$image->id}}" required/>
                             <p class="ptextarea">
-                                <textarea class="form-control b {{$errors->has('content') ? 'is-invalid' : ''}}" name="content" required>
-                                </textarea>
+                                <textarea class="form-control b {{$errors->has('content') ? 'is-invalid' : ''}}" name="content" required></textarea>
                                 @if($errors->has('content'))
                                 <span class="warn-red" role='alert'>
                                     <strong>{{$errors->first('content')}}</strong>
