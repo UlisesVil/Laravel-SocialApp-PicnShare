@@ -5,19 +5,16 @@
             <div class="flex">
                 <!-- Logo -->
                 <!--
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('home.redirect') }}">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="{{ route('home.redirect') }}">
+                            <x-jet-application-mark class="block h-9 w-auto" />
+                            <img src="{{asset('img/camlogo.jpg')}}" style="width: 50px"/>
+                        </a>
+                    </div>
                 -->
-                        <!--<x-jet-application-mark class="block h-9 w-auto" />-->
-                <!--
-                        <img src="{{asset('img/camlogo.jpg')}}" style="width: 50px"/>
-                    </a>
-                    
-                </div>
-                -->
+                
                 <!-- Navigation Links -->
                 <div class="textlogo">
-                    
                     <x-jet-nav-link href="{{ route('home.redirect') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Pic n Share') }}
                     </x-jet-nav-link>
@@ -27,22 +24,18 @@
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-jet-nav-link href="{{ route('home.redirect') }}" style="margin-right: 10px" >Inicio</x-jet-nav-link>
-                <x-jet-nav-link href="{{ route('user.index') }}" style="margin-right: 10px" >Gente</x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('user.index') }}" style="margin-right: 10px" >Comunidad</x-jet-nav-link>
                 <x-jet-nav-link href="{{ route('likes') }}" style="margin-right: 10px" >Favoritas</x-jet-nav-link>
                 <x-jet-nav-link href="{{ route('image.create') }}">Subir Imagen</x-jet-nav-link>
-                <x-jet-nav-link href="{{ route('home.redirect') }}"></x-jet-nav-link>
                 
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        
-                                         
-                    
                         <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
-                        @if(Auth::user()->profile_photo_path)
-                            <img class="h-10 w-10 rounded-full" src="{{route('user.avatar',['filename'=>Auth::user()->profile_photo_path])}}" alt="{{ Auth::user()->name }}" />
-                        @else
-                            <img class="h-10 w-10 rounded-full" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" />
-                        @endif
+                            @if(Auth::user()->profile_photo_path)
+                                <img class="h-10 w-10 rounded-full" src="{{route('user.avatar',['filename'=>Auth::user()->profile_photo_path])}}" alt="{{ Auth::user()->name }}" />
+                            @else
+                                <img class="h-10 w-10 rounded-full" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" />
+                            @endif
                         </button>
                     </x-slot>
 
@@ -52,6 +45,8 @@
                         <div class="block px-4 py-2 text-xs text-gray-400">
                             {{ __('Manage Account') }}
                         </div>
+                        
+                        <div class="border-t border-gray-100"></div>
                         
                         <x-jet-dropdown-link href="{{ route('profile',['id' => Auth::user()->id]) }}">
                             {{ __('Mis Publicaciones') }}
@@ -103,10 +98,9 @@
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
                             <x-jet-dropdown-link href="{{ route('logout') }}"
                                                 onclick="event.preventDefault();
-                                                            this.closest('form').submit();">
+                                                this.closest('form').submit();">
                                 {{ __('Logout') }}
                             </x-jet-dropdown-link>
                         </form>
@@ -143,9 +137,7 @@
                         @else
                             <img class="h-10 w-10 rounded-full" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" />
                         @endif
-                    
                 </div>
-
                 <div class="ml-3">
                     <div class="font-medium text-base text-white-800">{{ Auth::user()->name }}</div>
                     <div class="font-medium text-sm text-white-500">{{ Auth::user()->email }}</div>
@@ -158,9 +150,8 @@
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
-                
                 <x-jet-responsive-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Gente') }}
+                    {{ __('Comunidad') }}
                 </x-jet-responsive-nav-link>
                 <x-jet-responsive-nav-link href="{{ route('likes') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Favoritas') }}
@@ -171,7 +162,6 @@
                 <x-jet-responsive-nav-link href="{{ route('image.create') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Subir Imagen') }}
                 </x-jet-responsive-nav-link>
-                
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                     <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
@@ -182,10 +172,9 @@
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                    this.closest('form').submit();">
                         {{ __('Logout') }}
                     </x-jet-responsive-nav-link>
                 </form>

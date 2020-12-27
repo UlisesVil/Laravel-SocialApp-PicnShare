@@ -9,21 +9,17 @@
         <div class="titlefavs">
             <h1>Mis Favoritas</h1>
         </div>
-        
-        
-        
+         
         @foreach($likes as $like)
             @include('includes.image',['image'=>$like->image])
         @endforeach
-
     </div>
     
-     <!--PAGINACION-->
+    <!--PAGINACION-->
     <div class="clearfix"></div>
+    
     <div class="paginate">
         {{$likes->links()}}
     </div>
-    
-    
 </x-app-layout>
    

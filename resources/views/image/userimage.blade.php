@@ -1,13 +1,13 @@
 <x-app-layout>
-
     <div>
-        <div class="edittitle">Imagen de Usuario</div>
+        <div class="edittitle">
+            Imagen de Usuario
+        </div>
+        
         <div class="imageuser-form">
             <form method="POST" action="{{ route('user.userimage') }}" enctype="multipart/form-data" class="shadow-md px-8 pb-8 form-userimage">
                 @csrf
-
                 <input type="hidden" name="image_id" value="" />
-
                 <div class="imgusercontent" title="">
                     @if(Auth::user()->profile_photo_path)
                     <img src="{{route('user.avatar',['filename'=>Auth::user()->profile_photo_path])}}" style="width: 100%; border-radius: 10px;" />
@@ -37,12 +37,11 @@
 
                 <div class="btncontent">
                     <input class="button-image-form btnuserimg" type="submit" value="Guardar Imagen"/>
-                
-
-                <a class="button-image-form btnuserimg" href="{{ route('profile.show') }}">Regresar a Profile</a>
-            </div>
+                    <a class="button-image-form btnuserimg" href="{{ route('profile.show') }}">
+                        Regresar a Profile
+                    </a>
+                </div>
             </form>
         </div>
     </div>
-
 </x-app-layout>

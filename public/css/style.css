@@ -1,44 +1,19 @@
-/*se carga en views/layouts/app.blade.php*/
-/*css para estylos de Profile*/
-
-@font-face {
-font-family: cinzelbold;
-src: url(../fonts/cinzelbold.ttf);
-}
-@font-face {
-font-family: cinzelregular;
-src: url(../fonts/cinzelregular.ttf);
-}
-@font-face {
-font-family: frederick;
-src: url(../fonts/frederick.ttf);
-}
 @font-face {
 font-family: grupporegular;
 src: url(../fonts/grupporegular.ttf);
 }
-@font-face {
-font-family: racingsansoneregular;
-src: url(../fonts/racingsansoneregular.ttf);
-}
-@font-face {
-font-family: shadowsIntolighttworegular;
-src: url(../fonts/shadowsIntolighttworegular.ttf);
-}
 
 *{
-    /*background: #18191a;*/
     background: black;
     color: white;
     font-family: grupporegular;
 }
 
-
-
 nav{
     background: black !important;
     color: #22f1f4 !important;
 }
+
 nav a{
     background: black !important;
     color: #22f1f4 !important;
@@ -52,7 +27,6 @@ nav a{
     color: white;
     width: 100%;
     margin: 0px auto;
-    /*border: 1px solid red;*/
     border-radius: 10px;
     overflow: hidden;
 }
@@ -63,7 +37,6 @@ nav a{
     color: white;
     width: 100%;
     margin: 0px auto;
-    /*border: 1px solid red;*/
     border-radius: 10px;
     overflow: hidden;
 }
@@ -75,13 +48,8 @@ nav a{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    color: #22f1f4; 
-    /*border: 1px solid red;*/
+    color: #22f1f4;
 }
-
-
-
-
 
 .image-form{
     width: 800px; 
@@ -90,8 +58,8 @@ nav a{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    /*border: 1px solid red;*/
 }
+
 .image-form:hover{
    box-shadow: 0px 0px 15px 10px #660000;
 }
@@ -104,10 +72,7 @@ nav a{
     flex-direction: column;
     border-radius: 10px;
     background: black;
-    /*border: 1px solid red;*/
 }
-
-
 
 .edittitle{
     width: 50%; 
@@ -119,7 +84,6 @@ nav a{
 }
 
 .form-control{
-    
     width: 100%;
 }
 
@@ -127,12 +91,11 @@ nav a{
     background: #242526;
 }
 
-
 form{
     background: #242526;
     color: white;
-
 }
+
 .button-comments{
     background: orangered;
     color: white;
@@ -152,10 +115,12 @@ form{
     position: relative;
     top: 0px;
 }
+
 .deletecomment:hover{
     text-shadow: 0px 0px 10px red;
     top: -3px;
 }
+
 .deletecomment:active{
     top: -1px;
 }
@@ -166,20 +131,21 @@ form{
     position: relative;
     top: 0px;
 }
+
 .updateText:hover{
     text-shadow: 0px 0px 10px #22f1f4;
     top: -3px;
 }
+
 .updateText:active{
     top: -1px;
 }
-
-
 
 .warn-green{
     margin-top: 3px;
     color: green;
 }
+
 .warn-red{
     margin-top: 3px;
     color: red;
@@ -190,21 +156,16 @@ form{
     border: 2px solid red;
 }
 
-
 .cardcontainer{
-    /*border: 1px solid red;*/
     width: 600px;
     margin: 40px auto;
     border-radius: 10px;
     background: #242526;
     overflow: hidden;
-    
 }
 
 .cardcontainer:hover, .bxShadow:hover{
     box-shadow: 0px 0px 15px 10px #660000;
-    
-    
 }
 
 .cardcontainerInd{
@@ -222,7 +183,6 @@ form{
 
 
 .cardtop{
-    /*border: 1px solid red;*/
     background: #242526;
     color: white;
 }
@@ -232,7 +192,6 @@ form{
     padding-left: 10px;
     padding-bottom: 10px;
     background: #242526;
-    
 }
 
 .cardbottom{
@@ -268,7 +227,6 @@ hr{
 }
 
 .nickname{
-   
     margin-left: 5px;
     color: white;
     background: #242526;
@@ -277,7 +235,6 @@ hr{
 .mainimage{
     width: 100%;
     max-height: 600px;
-    
 }
 
 .mainimageInd{
@@ -293,14 +250,12 @@ hr{
 .btncard{
    width: 300px;
    height: 30px;
-/*   border: 1px solid red;*/
    margin-top: 5px;
    margin-left: 10px;
    background: #242526;
 }
 
 .btn{
-       
     border-radius: 5px;
     padding: 4px 5px;
 }
@@ -310,7 +265,6 @@ hr{
 .button-image-form, 
 label[for="image_path"],
 #search{
-    
     margin-top: 10px;
     border-radius: 0px;
     border-top-right-radius: 10px;
@@ -326,7 +280,6 @@ label[for="image_path"],
     outline-style: none;
     padding-right: 20px;
     padding-left: 20px;
-    
 }
 
 #buscador{
@@ -336,13 +289,16 @@ label[for="image_path"],
 .button-image-form{
     margin-left: 30px;
 }
+
 .btncontent{
     display: flex;
     flex-direction: column;
 }
+
 .btnuserimg{
     margin: 10px auto 20px;
 }
+
 .imgusercontent{
     width: 100%;
     border-radius: 10px;
@@ -361,7 +317,6 @@ label[for="image_path"]:hover{
     outline-style: none;
     box-shadow: 0px 0px 10px #22f1f4;
     top: -2px;
-    
 }
 
 .btn-comments:active, 
@@ -387,14 +342,11 @@ label[for="image_path"]:active{
 }
 
 .cardheart{
-    
     display: block;
     padding-top: 10px;
     width: 100%;
     height: fit-content;
     padding-bottom: 10px;
-    /*border: 1px solid red;*/
-    
 }
 
 .counterlikes{
@@ -403,20 +355,14 @@ label[for="image_path"]:active{
     font-size: 13px;
     text-align: right;
     background: #242526;
-    /*border: 1px solid red;*/
-
 }
 
 .heartlike{
-    
     display: block;
     width:100px;
     float: right;
     margin-right: 10px;
     background: #242526;
-    /*border: 1px solid red;*/
-
-        
 }
 
 .btn-dislike, .btn-like{
@@ -439,7 +385,6 @@ label[for="image_path"]:active{
     margin-left: 20px;
     background: #242526;
     color: white;
-/*    border: 1px solid red;*/
 }
 
 .comentscontent{
@@ -453,8 +398,6 @@ label[for="image_path"]:active{
     text-align: justify;
     background: #242526;
     color: white;
-    /*border: 1px solid red;*/
-
 }
 
 .members{
@@ -467,6 +410,7 @@ label[for="image_path"]:active{
     background: #242526;
     color: white;
 }
+
 .commentscard h2{
     background: #242526;
     color: white;
@@ -487,7 +431,6 @@ h3, .ptextarea, .uploadform{
 
 .edittext{
     width: 80%;
-    /*border: 1px solid red;*/
     background: #242526;
 }
 
@@ -495,7 +438,6 @@ h3, .ptextarea, .uploadform{
     color: white;
     border: 3px solid #3333;
     border-radius: 5px;
-    
 }
 
 svg{
@@ -518,34 +460,29 @@ svg{
 
 .titlefavs{
     width: 600px;
-    /*border: 1px solid red;*/
     margin: 0px auto;
     font-size: 30px;
     margin-top: 20px;
-    
 }
+
 .profile-user{
     width: 600px;
     height: content-box;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    /*border: 1px solid red;*/
 }
 
 .profile-user .container-avatar{
     width: 150px;
     max-height: 200px;
     border-radius: 10px;
-    /*border: 1px solid red;*/
     overflow: hidden;
     float: left;
-   
 }
 
 .profile-user .container-avatar img{
     width: 100%;
-    
     margin: auto;
 }    
 
@@ -557,7 +494,6 @@ svg{
     float: left;
     padding-left: 10px;
 }
-
 
 .cardgen{
     width: 800px;
@@ -572,7 +508,6 @@ svg{
 
 .secc1, .secc2, .secc3{
     display: block;
-    
     width: 100%;
     background: #242526;
 }
@@ -581,19 +516,17 @@ svg{
     width: 100%;
     background: #242526;
 }
+
 .secc3{
-    /*border: 1px solid red;*/
     height: 45px;
     padding-top: 10px;
     background: #242526;
 }
 
 .usercardind{
-/*    border: 1px solid red;*/
     float: left;
     margin-top: 10px;
     background: #242526;
-    
 }
 
 .imgindcard{
@@ -609,19 +542,16 @@ svg{
 .busqueda{
     width: 800px;
     margin: 20px auto;
-/*    border: 1px solid red;*/
 }
 
 .titleg{
     width: 100px;
     font-size: 30px;
     float: left;
-/*    border: 1px solid red;*/
 }
 
 .formsrch{
     float: right;
-/*     border: 1px solid red;*/
 }
 
 .buttonsrch{
@@ -632,8 +562,6 @@ svg{
 .btncont{
    float: right;
    margin-top: 15px;
-   
-   
 }
 
 ::-webkit-scrollbar-corner {
@@ -661,17 +589,16 @@ svg{
   width: 10px;
 }
 
-
 input[type=file]#image_path {
- width: 0.1px;
- height: 0.1px;
- opacity: 0;
- overflow: hidden;
- position: absolute;
- z-index: -1;
- }
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
  
- label[for="image_path"] {
+label[for="image_path"] {
     overflow: hidden;
     font-size: 13px;
     font-weight: 600;
@@ -682,173 +609,156 @@ input[type=file]#image_path {
     padding: 15px !important;
     width: fit-content;
     text-align: center;
-    
-    
-    
-    
-    
- }
+}
  
- .indicador{
-     overflow: hidden;
-     width: 150px;
-     max-width: 200px;
-     margin: 0px auto;
-     background: transparent;
- }
+.indicador{
+    overflow: hidden;
+    width: 150px;
+    max-width: 200px;
+    margin: 0px auto;
+    background: transparent;
+}
  
  
- .uploadbutton{
-     width: fit-content;
-     display: flex;
-     flex-direction: column;
-     margin: 10px auto;
-     text-align: center;
- }
+.uploadbutton{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    text-align: center;
+}
  
  
- .login-nav{
-     width: 100%;
-     height: 100px;
-     /*border: 1px solid red;*/
-     color: red;
-     background: black !important;
- }
+.login-nav{
+    width: 100%;
+    height: 100px;
+    color: red;
+    background: black !important;
+}
  
- .formjetprof{
-     background: black;
-     border: 1px solid white;
-     color: white;
-     overflow: hidden;
-     border-radius: 10px;
- }
+.formjetprof{
+    background: black;
+    border: 1px solid white;
+    color: white;
+    overflow: hidden;
+    border-radius: 10px;
+}
  
- .textinput{
-     color: black;
-     font-weight: bolder;
- }
- 
- .textlogo{
-     padding-top: 17px;
- }
+.textinput{
+   color: black;
+   font-weight: bolder;
+}
 
+.textlogo{
+   padding-top: 17px;
+}
+
+.imgsuser{
+   display: flex;
+   width: 800px;
+   height: 300px;
+   border: 1px solid green;
+   margin-top: 400px;
+}
+
+.btnprof{
+   margin-left: 0px !important;
+   margin-top: 20px;
+}
  
- .imgsuser{
-     display: flex;
-     width: 800px;
-     height: 300px;
-     border: 1px solid green;
-     margin-top: 400px;
- }
- 
- .btnprof{
-    margin-left: 0px !important;
-    margin-top: 20px;
- }
- 
- 
-  @media screen and (max-width: 830px){
-     .secc2{
-         width: 100%;
-     
-     }
-     
-     .cardcontainerInd,
-     .image-form,
-     .busqueda{
-         width: 90%;
-     }
-     
-     .cardbottom{
-         width: 90% !important;
-         margin: 0px;
-     }
-     
-     .descriptioncard{
-         width: 100%;
-     }
-     
-     
-     
- }
- 
- @media screen and (max-width: 640px){
-     
-     .cardcontainer, 
-     .cardcontainerInd,
-     .profile-user,
-     .titlefavs{
-         width: 90%;
-     }
-     
-     .btncont{
-        float: none;
-        margin-left: 10px;
-   
-   
+@media screen and (max-width: 830px){
+    
+    .secc2{
+       width: 100%;
     }
+
+    .cardcontainerInd,
+    .image-form,
+    .busqueda{
+       width: 90%;
+    }
+
+    .descriptioncard{
+       width: 87%;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+    .cardcontainer, 
+    .cardcontainerInd,
+    .profile-user,
+    .titlefavs{
+       width: 90%;
+    }
+
+    .btncont{
+      float: none;
+      margin-left: 10px;
+    }
+    
     .userprof{
-        display: flex;
-        flex-flow: column;
+      display: flex;
+      flex-flow: column;
     }
-     
- }
- 
- 
- @media screen and (max-width: 470px){
-     .imageuser-form{
-         width: 300px;
-     }
-     .form-userimage{
-         width: 300px;
-     }
- }
- 
- @media screen and (max-width: 300px){
-     
-     
+}
+
+
+@media screen and (max-width: 470px){
+    
+    .imageuser-form{
+        width: 300px;
+    }
+    .form-userimage{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px){
+
     .profile-user{
         display: flex;
         flex-direction: column;
     }
-    
-     .userprof{
-        display: flex;
-        flex-direction: column;
+
+    .userprof{
+       display: flex;
+       flex-direction: column;
     }
-    
+
     .erasebtns{
         display: flex;
         flex-direction: column;
         height: 100px;
     }
-    
+
     .btnerase{
         padding: 5px 40px;
         margin: 20px 0px;
         margin-top: 20px;
     }
-     
+
     .btnnoterase{
         margin-top: 20px;
     }
-    
+
     .secc3{
         height: 60px;
         display: flex;
         flex-direction: column;
     }
-    
+
     .heartlike{
         width: 100%;
     }
+    
     .counterlikes{
         float: right;
         width: 10px;
         margin-right: 10px;
     }
-    
+
     .login-nav{
         width: 124%;
     }
- }
+}

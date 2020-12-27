@@ -13,9 +13,7 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
     
-    
-    public function index($search = null){  //por defecto $search sera null
-//Comunmente el metodo index es el que lista
+    public function index($search = null){
         
         if(!empty($search)){
             $users = User::where('nick','LIKE','%'.$search.'%')

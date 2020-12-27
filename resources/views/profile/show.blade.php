@@ -37,7 +37,5 @@
                 @livewire('profile.delete-user-form')
             </div>
         </div>
-        
-        
     </div>
 </x-app-layout>

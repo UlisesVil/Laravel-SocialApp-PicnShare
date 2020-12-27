@@ -9,20 +9,16 @@ class Image extends Model
 {
     use HasFactory;
     
-    protected $table = 'images'; //se le indica que tabla que modificara
+    protected $table = 'images';
     
-    //Relacion One to Many / de uno a muchos
+    //Relacion One to Many
     public function comments(){
-        return $this->hasMany('App\Models\Comment')->orderBy('id', 'desc'); 
-    // Con $this->hasMany('App\Comment') se indica que en comments tenemos una 
-    // relacion con images y lo hace disponible en el objeto
+        return $this->hasMany('App\Models\Comment')->orderBy('id', 'desc');
     }
     
     //Relacion One to Many
     public function likes(){
-        return $this->hasMany('App\Models\Like'); 
-    // Con $this->hasMany('App\Comment') se indica que en comments tenemos una 
-    // relacion con images y lo hace disponible en el objeto
+        return $this->hasMany('App\Models\Like');
     }
     
     //Relacion Many to One

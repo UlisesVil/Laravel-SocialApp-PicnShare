@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-
         @livewireStyles
 
         <!-- Scripts -->
@@ -23,19 +22,15 @@
         <script type="text/javascript" src="../../resources/js/main.js"></script>
         
         <!--JQuery-->
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     </head>
+    
     <body class="font-sans bg-black">
-        
-                  
-            
         <div class="login-nav">
             @livewire('navigation-dropdown')
-            
+    
             <!-- Page Heading -->
             <header class="bg-black shadow">
-               
             </header>
 
             <!-- Page Content -->
@@ -45,20 +40,6 @@
         </div>
 
         @stack('modals')
-
         @livewireScripts
-        
-        
-        <script type="application/javascript">
-                jQuery('input[type=file]').change(function(){
-                 var filename = jQuery(this).val().split('\\').pop();
-                 var idname = jQuery(this).attr('id');
-                 console.log(jQuery(this));
-                 console.log(filename);
-                 console.log(idname);
-                 jQuery('span.'+idname).next().find('span').html(filename);
-                });           
-        </script>
-        
     </body>
 </html>

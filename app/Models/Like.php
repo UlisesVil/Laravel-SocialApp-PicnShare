@@ -19,7 +19,7 @@ class Like extends Model
         return $this->belongsTo('App\Models\User', 'user_id');
     }
     
-        //Relacion Many to One
+    //Relacion Many to One
     public function image(){
         return $this->belongsTo('App\Models\Image', 'image_id');
     }

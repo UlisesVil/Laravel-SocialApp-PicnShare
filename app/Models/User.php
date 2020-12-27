@@ -68,9 +68,7 @@ class User extends Authenticatable
     
     //Relacion One to Many
     public function images(){
-        return $this->hasMany('App\Models\Image'); 
-    // Con $this->hasMany('App\Comment') se indica que en comments tenemos una 
-    // relacion con images y lo hace disponible en el objeto
+        return $this->hasMany('App\Models\Image');
     }
     
 }

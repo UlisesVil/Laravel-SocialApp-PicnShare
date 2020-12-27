@@ -15,7 +15,7 @@ class LikeController extends Controller
     public function index(){
         $user = \Auth::user();
         $likes = Like::where('user_id', $user->id)->orderBy('id','desc')
-                              ->paginate(5);
+                                                  ->paginate(5);
         
         return view('like.index',[
             'likes' => $likes
@@ -23,16 +23,14 @@ class LikeController extends Controller
     } 
     
     public function like($image_id){
+        
         //Recoger datos del usuario y la imagen
         $user = \Auth::user();
         
-        //Condicion para  ver si ya existe el like y no duplicarlo
+        //Like existe? y no duplicarlo
         $isset_like = Like::where('user_id', $user->id)
                             ->where('image_id', $image_id)
-                            ->count();  //saca la cuenta
-                            //->get(); es igual que un SELECT * FROM
-                    //var_dump($isset_like);
-                    //die();
+                            ->count();
         if($isset_like==0){
         
             $like = new Like();
@@ -40,9 +38,8 @@ class LikeController extends Controller
             $like->image_id = (int)$image_id;
 
             //Guardar
-            $like->save();   //metodo save para guardar en la DB
-            //var_dump($like);
-            //die();
+            $like->save();
+            
             return response()->json([
                 'like' => $like
             ]);
@@ -54,21 +51,17 @@ class LikeController extends Controller
     }
     
     public function dislike($image_id){
-        //Recoger datos del usuario y la imagen
+        
         $user = \Auth::user();
         
-        //Condicion para  ver si ya existe el like y no duplicarlo
+        //Like existe? y no duplicarlo
         $like = Like::where('user_id', $user->id)
                             ->where('image_id', $image_id)
-                            ->first();   //sacara un unico objeto
-                    //var_dump($isset_like);
-                    //die();
+                            ->first();
         if($like){
-        
             //Eliminar like
-            $like->delete();   //metodo savee para guardar en la DB
-            //var_dump($like);
-            //die();
+            $like->delete();
+            
             return response()->json([
                 'like' => $like,
                 'message' => 'Ya no te Gusta'    

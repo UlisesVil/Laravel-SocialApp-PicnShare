@@ -3,7 +3,6 @@
     <x-slot name="title">
          <div style="color: white; font-weight: bolder">
         {{ __('Profile Information') }}
-        
     </x-slot>
 
     <x-slot name="description">
@@ -11,13 +10,13 @@
         {{ __('Update your account\'s profile information and email address.') }}
         </div>
     </x-slot>
-     
-  
    
-    
     <x-slot name="form">
          
         <!-- Profile Photo -->
+        <!-- La foto de perfil por default de Jetstream fue sustituida por codigo propio
+             por lo tanto la siguiente condicion esta desabilitada
+        -->
         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
             <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 sm:col-span-4">
                 <!-- Profile Photo File Input -->
@@ -32,48 +31,38 @@
                                     };
                                     reader.readAsDataURL($refs.photo.files[0]);
                             " />
-
                 <x-jet-label for="photo" value="{{ __('Photo') }}" />
-
                 <!-- Current Profile Photo -->
                 @include('includes.avatar')
-
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview">
                     <span class="block rounded-full w-20 h-20"
                           x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
                     </span>
                 </div>
-                
-                
-
                 <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('Select A New Photo') }}
                 </x-jet-secondary-button>
-
                 @if ($this->user->profile_photo_path)
                     <x-jet-secondary-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
                         {{ __('Remove Photo') }}
                     </x-jet-secondary-button>
                 @endif
-
                 <x-jet-input-error for="photo" class="mt-2" />
             </div>
         @endif
         
-        
+    <!--Foto de perfil de codigo propio-->   
         <div class="col-span-6 sm:col-span-4">
             @if(Auth::user()->profile_photo_path)
-                <img src="{{route('user.avatar',['filename'=>Auth::user()->profile_photo_path])}}" style="width: 150px; margin-bottom: 20px" />
+                <img src="{{route('user.avatar',['filename'=>Auth::user()->profile_photo_path])}}" style="width: 150px; margin-bottom: 20px; border-radius: 10px;" />
                 <!--src="{{url('/user/avatar/'.Auth::user()->profile_photo_path)}}"-->
+            @else
+                <img class="rounded-full" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" style="width: 150px; margin-bottom: 20px; border-radius: 10px;"/>
             @endif
-        
             <a class="vpbtn" href="{{ route('image.userimage') }}">Select a New Photo</a>
-           
         </div>
-        
-   
-        
+         
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="name" value="{{ __('Name') }}" />
@@ -114,5 +103,3 @@
         </x-jet-button>
     </x-slot>
 </x-jet-form-section>
-<!--{{var_dump($this->user->profile_photo_url)}}
-{{var_dump($this->user->profile_photo_path)}}-->

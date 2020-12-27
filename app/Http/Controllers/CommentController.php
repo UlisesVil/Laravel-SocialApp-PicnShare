@@ -13,17 +13,19 @@ class CommentController extends Controller
     }
     
     public function save(Request $request){
-        //VAlidacion
+        
+        //Validacion
         $validate = $this->validate($request, [
             'image_id' => 'integer|required',
             'content' => 'string|required'
         ]);
+        
         //Recoger Datos
         $user = \Auth::user();
         $image_id = $request->input('image_id');
         $content = $request->input('content');
         
-        //Asigno los valores a mi nuevo objeto a guerdar
+        //Nuevo objeto
         $comment = new Comment();
         $comment->user_id = $user->id;
         $comment->image_id = $image_id;
@@ -37,18 +39,17 @@ class CommentController extends Controller
                          ->with([
                              'message' => 'Has publicado tu comentario Correctamente!!'
                          ]);
-        
-        
     }
     
-    public function delete($id){  //id del comentario que se eliminara
-        //Conseguir datos del usuario logueado
-        $user = \Auth::user();  //sacamos el objeto completo del usuario que esta logueado
+    public function delete($id){
         
-        //Conseguir objeto  del comentario
-        $comment = Comment::find($id);  //tabla Comment metodo find para consulta
+        //Conseguir datos del usuario logueado
+        $user = \Auth::user();
+        
+        //Objeto  del comentario
+        $comment = Comment::find($id);
     
-        //Comprobar si soy el dueño del comentario o de la publicacion
+        //Comprobar dueño del comentario o de la publicacion
         if($user && ($comment->user_id == $user->id || $comment->image->user_id == $user->id)){
             $comment->delete();
             
@@ -63,5 +64,4 @@ class CommentController extends Controller
                             ]);
         }
     }
-    
 }
