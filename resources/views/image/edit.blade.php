@@ -3,13 +3,15 @@
         Editar Imagen
     </div>
     
-    <div class="image-form">
+    <div class="image-formEdit">
         <form method="POST" action="{{ route('image.update') }}" enctype="multipart/form-data" class="shadow-md px-8 pb-8 form-general">
             @csrf
             <input type="hidden" name="image_id" value="{{$image->id}}" />
 
-            <div class="" title="" style="width: 100%; margin:auto; " >
-                <img src=" {{route('image.file', ['filename' => $image->image_path]) }}" style="width: 100%;" />
+            <div class="imgEditContent" title="" style="width: 100%;" >
+                <h2>Cambiar esta Imagen</h2>
+                <img src=" {{route('image.file', ['filename' => $image->image_path]) }}" style="width: 100%; margin: 0px auto; border-radius: 10px;" />
+                <div id="imagePrevEdit" ></div>
             </div>
 
             <div class="form-group row uploadform">

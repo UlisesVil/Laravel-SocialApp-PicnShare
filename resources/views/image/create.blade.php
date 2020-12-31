@@ -9,8 +9,10 @@
     </div>
         
     <div class="create-form">
+        
 
-        <form method="POST" action="{{route('image.save')}}" enctype="multipart/form-data" class="shadow-md px-8 pb-8 form-general">
+        <form method="POST" action="{{route('image.save')}}" enctype="multipart/form-data" id="uploadForm" class="shadow-md px-8 pb-8 form-general">
+            <div id="imagePrev" ></div>
             @csrf
             <div class="form-group row uploadform">
                 <div class="mb-4 element uploadform uploadbutton">
