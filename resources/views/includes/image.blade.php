@@ -58,7 +58,7 @@
         </div>
         <div class="btncard">
             <a href="{{ route('image.detail', ['id' => $image->id]) }}" class="btn btn-warning btn-comments">
-                Comentarios ( {{count($image->comments)}} )
+                Comments ( {{count($image->comments)}} )
             </a>
         </div>    
     </div>
