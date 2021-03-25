@@ -5,7 +5,7 @@
     </x-slot>
         
     <div class="createtitle">
-        Subir imagen
+        Upload image
     </div>
         
     <div class="create-form">
@@ -16,14 +16,14 @@
             @csrf
             <div class="form-group row uploadform">
                 <div class="mb-4 element uploadform uploadbutton">
-                    Selecciona tu Imagen
+                    Choose your Image
                     <span class="image_path">
                         <input type="file" name="image_path" id="image_path" class="fileup" required/>
                     </span>
                     <label for="image_path">
                         <div class="indicador">
                             <span style="color: #22f1f4; background: transparent">
-                                Subir Imagen
+                                Upload Image
                             </span>
                         </div>
                     </label>
@@ -41,10 +41,10 @@
 
             <div class="form-group row element">
                 <div class="mb-4 uploadform createform">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 uploadform {{$errors->has('content') ? 'is-invalid' : ''}}" for="description">
-                        Describe tu Imagen o Comenta algo:
+                    <label class="block text-gray-700 text-sm font-bold mb-2 uploadform describeComment {{$errors->has('content') ? 'is-invalid' : ''}}" for="description">
+                        Describe your Image or Comment something:
                     </label>
-                    <textarea  id="description" name="description" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control" placeholder="Descripcion" required></textarea>
+                    <textarea  id="description" name="description" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control" placeholder="Description" required></textarea>
                 </div>
 
                 <div class="mt-2 element warn">
@@ -57,7 +57,7 @@
             </div>
 
             <div class="flex items-center justify-between uploadform">
-                <input class="button-image-form" type="submit" value="Subir"/>
+                <input class="button-image-form" type="submit" value="Upload"/>
             </div>
         </form>
        

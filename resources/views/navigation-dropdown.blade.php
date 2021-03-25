@@ -16,17 +16,17 @@
                 <!-- Navigation Links -->
                 <div class="textlogo">
                     <x-jet-nav-link href="{{ route('home.redirect') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Pic n Share') }}
+                        {{ __('Pic\'n Share') }}
                     </x-jet-nav-link>
                 </div>
             </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
-                <x-jet-nav-link href="{{ route('home.redirect') }}" style="margin-right: 10px" >Inicio</x-jet-nav-link>
-                <x-jet-nav-link href="{{ route('user.index') }}" style="margin-right: 10px" >Comunidad</x-jet-nav-link>
-                <x-jet-nav-link href="{{ route('likes') }}" style="margin-right: 10px" >Favoritas</x-jet-nav-link>
-                <x-jet-nav-link href="{{ route('image.create') }}">Subir Imagen</x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('home.redirect') }}" style="margin-right: 10px" >Main</x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('user.index') }}" style="margin-right: 10px" >Community</x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('likes') }}" style="margin-right: 10px" >Favorites</x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('image.create') }}">Upload Image</x-jet-nav-link>
                 
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -49,7 +49,7 @@
                         <div class="border-t border-gray-100"></div>
                         
                         <x-jet-dropdown-link href="{{ route('profile',['id' => Auth::user()->id]) }}">
-                            {{ __('Mis Publicaciones') }}
+                            {{ __('My Posts') }}
                         </x-jet-dropdown-link>
 
                         <x-jet-dropdown-link href="{{ route('profile.show') }}">
@@ -124,7 +124,7 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('home.redirect') }}" :active="request()->routeIs('home.redirect')">
-                {{ __('Inicio') }}
+                {{ __('Main') }}
             </x-jet-responsive-nav-link>
         </div>
 
@@ -151,16 +151,16 @@
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
                 <x-jet-responsive-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Comunidad') }}
+                    {{ __('Community') }}
                 </x-jet-responsive-nav-link>
                 <x-jet-responsive-nav-link href="{{ route('likes') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Favoritas') }}
+                    {{ __('Favorites') }}
                 </x-jet-responsive-nav-link>
                 <x-jet-responsive-nav-link href="{{ route('profile',['id' => Auth::user()->id]) }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Mis Publicaciones') }}
+                    {{ __('My Posts') }}
                 </x-jet-responsive-nav-link>
                 <x-jet-responsive-nav-link href="{{ route('image.create') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Subir Imagen') }}
+                    {{ __('Upload Image') }}
                 </x-jet-responsive-nav-link>
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

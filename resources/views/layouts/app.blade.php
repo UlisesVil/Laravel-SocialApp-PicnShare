@@ -20,6 +20,7 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.js" defer></script>
         <script src="{{ asset('js/main.js') }}"></script>
         <script type="text/javascript" src="../../resources/js/main.js"></script>
+        <script src="https://kit.fontawesome.com/94235d9528.js" crossorigin="anonymous"></script>
         
         <!--JQuery-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

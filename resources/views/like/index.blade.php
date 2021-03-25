@@ -7,7 +7,7 @@
     
     <div>
         <div class="titlefavs">
-            <h1>Mis Favoritas</h1>
+            <h1>Favorites</h1>
         </div>
          
         @foreach($likes as $like)

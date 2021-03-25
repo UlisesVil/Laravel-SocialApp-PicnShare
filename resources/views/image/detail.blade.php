@@ -61,13 +61,13 @@
             <div class="cardcontainerIndbottom">
                 <div class="flex flex-col justify-between cardbottomind uploadform">
                     <div class="mb-8 comentscontent">
-                        <div class="text-white-900 font-bold text-xl mb-2 titledescription">{{$image->user->name.' '.$image->user->surname}} dice:</div>
+                        <div class="text-white-900 font-bold text-xl mb-2 titledescription">{{$image->user->name.' '.$image->user->surname}} say:</div>
                         <p class="text-white-700 text-base descriptioncard">{{$image->description}}</p>
                     </div>
                     
                     @if(Auth::user() && Auth::user()->id == $image->user->id)
                     <div class="actions uploadform mainText">
-                        <a href="{{ route('image.edit',['id' => $image->id]) }}" class="btn btn-warning updateText">Actualizar</a>
+                        <a href="{{ route('image.edit',['id' => $image->id]) }}" class="btn btn-warning updateText">Update</a>
                         <!--<a href="{{ route('image.delete', ['id'=> $image->id]) }}" class="btn btn-danger">Borrar</a>-->
                         @include('modal.delete')
                     </div>
@@ -76,7 +76,7 @@
                     <div class="clearfix"></div>
                     
                     <div class="commentscard">
-                        <h2>Agrega un Comentario</h2>
+                        <h2>Comment Something:</h2>
                         <hr/>
                         <form method="POST" action="{{ route('comment.save') }}">
                             @csrf
@@ -90,13 +90,13 @@
                                 @endif
                             </p>
                             <button type="submit" class="btn-comments">
-                                Enviar                                
+                                Send                                
                             </button>
                         </form>    
                     </div>
 
                     <h3 class="mainText">
-                        Comentarios ( {{count($image->comments)}} )
+                        Comments ( {{count($image->comments)}} )
                     </h3>
 
                     <hr>

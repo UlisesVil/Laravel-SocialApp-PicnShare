@@ -50,7 +50,7 @@
     <div class="bg-black rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal cardbottom">
         <div class="mb-8 comentscontent">
             <div class="font-bold text-xl mb-2 titledescription">
-                {{$image->user->name.' '.$image->user->surname}} dice:
+                {{$image->user->name.' '.$image->user->surname}} Say:
             </div>
             <p class="text-base descriptioncard">
                 {{$image->description}}

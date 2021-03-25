@@ -7,7 +7,7 @@
     
     <div class="busqueda">
         <div class="titleg">
-            <h1>Comunidad</h1>
+            <h1>Comunity</h1>
         </div>  
         
         <div class="formsrch">
@@ -15,7 +15,7 @@
                 <!--se usa Javascript (archivo main.js) para enviar el dato por la url-->
                 <input type="text" id="search" class="form-control"/>
                 <!--le quitamos el name="search" para que no aparezca este parametro en la url-->
-                <input type="submit" value="Buscar" class="bg-transparent border font-bold px-4 rounded-full vpbtn buttonsrch">
+                <input type="submit" value="Search" class="bg-transparent border font-bold px-4 rounded-full vpbtn buttonsrch">
             </form>
         </div>
         
@@ -37,12 +37,12 @@
                     <div class="user-info">
                         <h1>{{'@'.$user->nick}}</h1>
                         <h2>{{$user->name.' '.$user->surname}}</h2>
-                        <p>Se unio {{\FormatTime::LongTimeFilter($user->created_at)}}</p>
+                        <p>Joined {{\FormatTime::LongTimeFilter($user->created_at)}}</p>
                     </div>
 
                     <div class="btncont">
                         <a href=" {{ route('profile', ['id' => $user->id]) }}" class="bg-transparent border font-bold py-2 px-4 rounded-full vpbtn">
-                            Ver Prefil
+                            View Profile
                         </a>
                     </div>
             </div>
