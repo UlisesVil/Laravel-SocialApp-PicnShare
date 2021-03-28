@@ -235,10 +235,13 @@ hr{
     margin-left: 10px;
 }
 
-.nickname{
-    margin-left: 5px;
+.nickname,.nicknamesecc3{
     color: white;
     background: #242526;
+    /*border: 1px solid red;*/
+}
+.nicknamesecc3{
+    margin-left: 15px;
 }
 
 .mainimage{
@@ -378,30 +381,44 @@ label[for="image_path"]:active{
 }
 
 .cardheart{
-    display: block;
-    padding-top: 10px;
-    width: 100%;
-    height: fit-content;
+    /*display: block;*/
+    /*padding-top: 10px;*/
+    /*width: 100%;
+    height: fit-content;*/
     padding-bottom: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding-top: 10px;
+    background: #242526;
 }
 
 .counterlikes{
-    width: 64px;
-    float: left;
+    width: fit-content;
+    margin-right: 5px;
     font-size: 13px;
-    text-align: right;
     background: #242526;
+    /*border: 1px solid red;*/
 }
 
 .heartlike{
-    display: block;
-    width:100px;
-    float: right;
+    display: flex;
+    flex-direction: row;
+    min-width: 100px;
+    width:fit-content;
+    align-items: center;
+    justify-content: flex-end;
     margin-right: 10px;
+    box-sizing: content-box;
     background: #242526;
+    /*border: 1px solid red;*/
 }
 
 .btn-dislike, .btn-like{
+    display: block;
     width: 30px;
     float: right;
     background: #242526;
@@ -542,7 +559,7 @@ svg{
     border-top-right-radius: 10px;
 }
 
-.secc1, .secc2, .secc3{
+.secc1, .secc2{
     display: block;
     width: 100%;
     background: #242526;
@@ -554,6 +571,10 @@ svg{
 }
 
 .secc3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     height: 45px;
     padding-top: 10px;
     background: #242526;
@@ -783,7 +804,7 @@ label[for="image_path"] {
     .btnnoterase{
         margin-top: 20px;
     }
-
+/*
     .secc3{
         height: 60px;
         display: flex;
@@ -793,12 +814,8 @@ label[for="image_path"] {
     .heartlike{
         width: 100%;
     }
+    */
     
-    .counterlikes{
-        float: right;
-        width: 10px;
-        margin-right: 10px;
-    }
 
     .login-nav{
         width: 124%;
@@ -847,7 +864,6 @@ label[for="image_path"] {
     flex-direction: column;
     text-align: center;
     font-size: 20px;
-    padding-bottom: 20px;
 }
 
 

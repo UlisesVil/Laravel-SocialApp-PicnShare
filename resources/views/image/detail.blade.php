@@ -34,7 +34,7 @@
             <div class="clearfix"></div>
 
             <div class="secc3" >
-                <span class="mainText leading-none nickname">
+                <span class="mainText leading-none nicknamesecc3">
                     {{'@'.$image->user->nick.' | '.\FormatTime::LongTimeFilter($image->created_at)}}
                 </span>
                 <div class="heartlike text-white-900">
@@ -111,7 +111,7 @@
 
                         @if(Auth::check() && ($comment->user_id == Auth::user()->id || $comment->image->user_id == Auth::user()->id))
                             <a class="deletecomment" href="{{ route('comment.delete', ['id' => $comment->id])}}">
-                                Eliminar
+                                Delete
                             </a>
                         @endif
                         <hr>

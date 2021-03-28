@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="edittitle">
-        Editar Imagen
+        Edit image
     </div>
     
     <div class="image-formEdit">
@@ -9,21 +9,21 @@
             <input type="hidden" name="image_id" value="{{$image->id}}" />
 
             <div class="imgEditContent" title="" style="width: 100%;" >
-                <h2>Cambiar esta Imagen</h2>
-                <img src=" {{route('image.file', ['filename' => $image->image_path]) }}" style="width: 100%; margin: 0px auto; border-radius: 10px;" />
+                <h2>Change this Image</h2>
+                <img src=" {{route('image.file', ['filename' => $image->image_path]) }}" style="width: 100%; margin: 0px auto; border-top-right-radius: 10px; border-top-left-radius: 10px;" />
                 <div id="imagePrevEdit" ></div>
             </div>
 
             <div class="form-group row uploadform">
                 <div class="mb-4 element uploadform uploadbutton">
-                            Selecciona tu Imagen
+                            Select your Image
                     <span class="image_path">
                         <input type="file" name="image_path" id="image_path" class="fileup"/>
                     </span>
                     <label for="image_path">
                         <div class="indicador">
                             <span style="color: #22f1f4; background: transparent">
-                                Subir Imagen
+                                Upload Image
                             </span>
                         </div>
                     </label>
@@ -41,9 +41,9 @@
             <div class="form-group row element edittext">
                 <div class="mb-4 uploadform ptextarea" >
                     <label class=" ptextarea {{$errors->has('content') ? 'is-invalid' : ''}}" for="description">
-                        Describe tu Imagen o Comenta algo:
+                        Describe your Image or Comment something:
                     </label>
-                    <textarea  id="description" name="description" class="form-control" placeholder="Descripcion" required>{{$image->description}}</textarea>
+                    <textarea  id="description" name="description" class="form-control" placeholder="Description" required>{{$image->description}}</textarea>
                 </div>
 
                 <div class="mt-2 element warn">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="flex items-center justify-between uploadform">
-                <input class="button-image-form" type="submit" value="Actualizar Imagen"/>
+                <input class="button-image-form" type="submit" value="Update Image"/>
             </div>
         </form>
     </div>

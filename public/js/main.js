@@ -89,8 +89,8 @@ window.addEventListener('load', function(){
                 $('#imageUser + #divafterUserImage').remove();
                 
                 $('#imagePrev').after('<div id="divafter" class="uploadform uploadbutton" style="width=100%"><h2 class="uploadform uploadbutton">Preview</h2><img src="'+e.target.result+'" width="100%"/></div>');
-                $('#imagePrevEdit').after('<div id="divafteredit"class="imagePrevEdit2" style="width=50%"><h2>Por esta otra?</h2><img src="'+e.target.result+'" style="width: 100%; margin: 0px auto; border-radius: 10px;"/></div>');
-                $('#imageUser').after('<div id="divafterUserImage"class="imagePrevEdit2"><h2>Por esta otra?</h2><img src="'+e.target.result+'" style="width: 70%; margin: 0px auto; border-radius: 10px;"/></div>');
+                $('#imagePrevEdit').after('<div id="divafteredit"class="imagePrevEdit2" style="width=50%"><h2>For this One?</h2><img src="'+e.target.result+'" style="width: 100%; margin: 0px auto; border-radius: 10px;"/></div>');
+                $('#imageUser').after('<div id="divafterUserImage"class="imagePrevEdit2"><h2>For this One?</h2><img src="'+e.target.result+'" style="width: 70%; margin: 0px auto; border-radius: 10px;"/></div>');
             };
         }
     }
