@@ -1,20 +1,20 @@
 <div class="login-nav">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block  bg-black-900 login-nav">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline test">Dashboard</a>
-                    @else
-                    <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 test">Pic n Share</a>
-      
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline test ml-4">Login</a>
+    @if (Route::has('login'))
+        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block  bg-black-900 login-nav">
+            @auth
+                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline test">Dashboard</a>
+            @else
+            <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 test">Pic n Share</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-red-700 underline test">Register</a>
-                        @endif
-                    @endif
-                    
-                </div>
+            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline test ml-4">Login</a>
+
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="ml-4 text-sm text-red-700 underline test">Sign Up</a>
+                @endif
             @endif
+
+        </div>
+    @endif
 </div>
 
 <x-guest-layout>
@@ -25,13 +25,13 @@
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
-        
+
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">
                 {{ session('status') }}
             </div>
         @endif
-        
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -64,7 +64,7 @@
                 </x-jet-button>
                 <a href="{{ route('register') }}" >
                     <div style="padding: 10px; background: black;" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 ml-4">
-                        {{ __('Register') }}
+                        {{ __('Sign Up') }}
                     </div>
                 </a>
             </div>

@@ -30,9 +30,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
       'images' => $images
     ]);
 })->name('home.redirect');
-    
 
-//USUARIO
+
+//USER
 Route::get('/perfil/{id}','App\Http\Controllers\HomeController@profile')->name('profile');
 Route::get('/gente/{search?}','App\Http\Controllers\HomeController@index')->name('user.index');
 Route::get('/imageuser', 'App\Http\Controllers\ImageController@imguser')->name('image.userimage');

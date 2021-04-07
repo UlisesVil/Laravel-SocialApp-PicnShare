@@ -4,7 +4,7 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    
+
     <div class="profile-user">
         <div class="container-avatar">
             @if($user->profile_photo_path)
@@ -13,26 +13,25 @@
                 <img class="" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" />
             @endif
         </div>
-        
+
         <div class="user-info">
             <h1>{{'@'.$user->nick}}</h1>
             <h2>{{$user->name.' '.$user->surname}}</h2>
             <p>Joined {{\FormatTime::LongTimeFilter($user->created_at)}}</p>
         </div>
-        
-        <div class="clearfix"></div> 
-        <br/>    
-        <hr>  
+
+        <div class="clearfix"></div>
+        <br/>
+        <hr>
     </div>
-              
-    <div class="clearfix"></div>               
-    
+
+    <div class="clearfix"></div>
+
     <div>
         @include('includes.message')
-        
         @foreach($user->images as $image)
             @include('includes.image',['image'=>$image])
         @endforeach
     </div>
-</x-app-layout> 
+</x-app-layout>
 

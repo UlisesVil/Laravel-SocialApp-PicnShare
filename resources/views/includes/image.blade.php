@@ -21,7 +21,7 @@
 
     <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden mainimage" title="">
         <a href="{{ route('image.detail', ['id' => $image->id]) }}"> <img class="imgzoom" src=" {{route('image.file', ['filename' => $image->image_path]) }}" /></a>
-        
+
     </div>
     <div class="bg-black cardtop cardheart " >
         <span class="mainText leading-none nickname">
@@ -31,11 +31,10 @@
             <div class="counterlikes mainText">
                 {{count($image->likes)}}
             </div>
-            <!--Comprobar si el usuario le dio like a la imagen-->
-            <?php $user_like = false; ?> 
+            <?php $user_like = false; ?>
             @foreach($image->likes as $like)
                 @if($like->user->id == Auth::user()->id)
-                    <?php $user_like = true; ?> 
+                    <?php $user_like = true; ?>
                 @endif
             @endforeach
 
@@ -43,7 +42,7 @@
                 <img src="{{asset('img/heartred.png')}}" data-id="{{$image->id}}" class="btn-dislike"/>
             @else
                 <img src="{{asset('img/heartgray.png')}}" data-id="{{$image->id}}" class="btn-like"/>
-            @endif    
+            @endif
         </div>
     </div>
 
@@ -60,6 +59,6 @@
             <a href="{{ route('image.detail', ['id' => $image->id]) }}" class="btn btn-warning btn-comments">
                 Comments ( {{count($image->comments)}} )
             </a>
-        </div>    
+        </div>
     </div>
 </div>

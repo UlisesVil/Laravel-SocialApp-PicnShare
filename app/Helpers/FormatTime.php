@@ -1,10 +1,6 @@
 <?php
-//viene de https://victorroblesweb.es/2018/01/18/crear-helpers-en-laravel-5/
-
 namespace App\Helpers;
-  
 use Illuminate\Support\Facades\DB;
-  
 class FormatTime {
  
     public static function LongTimeFilter($date) {

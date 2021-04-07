@@ -14,12 +14,12 @@
                 <x-jet-label value="{{ __('Name') }}" />
                 <x-jet-input class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
-            
+
             <div class="mt-4">
                 <x-jet-label value="{{ __('Surname') }}" />
                 <x-jet-input class="block mt-1 w-full" type="text" name="surname" :value="old('surname')" required />
             </div>
-            
+
             <div class="mt-4">
                 <x-jet-label value="{{ __('Nick') }}" />
                 <x-jet-input class="block mt-1 w-full" type="text" name="nick" :value="old('nick')" required />
@@ -46,7 +46,7 @@
                 </a>
 
                 <x-jet-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Sign Up') }}
                 </x-jet-button>
             </div>
         </form>

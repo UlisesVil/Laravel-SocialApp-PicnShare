@@ -7,14 +7,13 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\User;
 
-class HomeController extends Controller
-{
+class HomeController extends Controller{
+
     public function __construct(){
         $this->middleware('auth');
     }
     
     public function index($search = null){
-        
         if(!empty($search)){
             $users = User::where('nick','LIKE','%'.$search.'%')
                             ->orWhere('name','LIKE','%'.$search.'%')
@@ -31,7 +30,6 @@ class HomeController extends Controller
     
     public function profile($id){
         $user = User::find($id);
-        
         return view('user.profile', [
             'user' => $user
         ]);

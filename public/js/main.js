@@ -7,78 +7,63 @@ window.addEventListener('load', function(){
     $('.btn-like').css('cursor','pointer');
     $('.btn-dislike').css('cursor','pointer');
     
-    //Boton de like
+    //Like Button
     function like(){
         
         $('.btn-like').unbind('click').click(function(){
-            console.log('like');
             $(this).addClass('btn-dislike').removeClass('btn-like');
             $(this).attr('src', url+'/img/heartred.png');
-            console.log(url);
             $.ajax({
                 url: url+'/like/'+$(this).data('id'),
                 type:'GET',
                 succes: function(response){
                     if(response.like){
-                        console.log('Has  dado like a la publicacion');
+                        console.log('You have liked the publication');
                     }else{
-                        console.log('Error al dar like');
+                        console.log('Like Failed');
                     }
                 }
             });
-            
             dislike();
         });
     }
-    
     like();
     
-    //Boton de dislike
+    //Dislike Button
     function dislike(){
-        
+
         $('.btn-dislike').unbind('click').click(function(){
-            console.log('dislike');
             $(this).addClass('btn-like').removeClass('btn-dislike');
             $(this).attr('src', url+'/img/heartgray.png');
             like();
-            
             $.ajax({
                 url: url+'/dislike/'+$(this).data('id'),
                 type:'GET',
                 succes: function(response){
                     if(response.like){
-                        console.log('Has  dado dislike a la publicacion');
+                        console.log('You have liked the publication');
                     }else{
-                        console.log('Error al dar dislike');
+                        console.log('Like Failed');
                     }
                 }
             });
         });
     }
-    
     dislike();
     
-    //Buscador
+    //Search
     $('#buscador').submit(function(e){
-       
         $(this).attr('action',url+'/gente/'+$('#buscador #search').val());
-       
+    });
+
+    //Upload Button
+    $('input[type=file]').change(function(){
+        var filename = $(this).val().split('\\').pop();
+        var idname = $(this).attr('id');
+        $('span.'+idname).next().find('span').html(filename);
     });
     
-    
-    //Boton Upload
-    jQuery('input[type=file]').change(function(){
-        var filename = jQuery(this).val().split('\\').pop();
-        var idname = jQuery(this).attr('id');
-        console.log(jQuery(this));
-        console.log(filename);
-        console.log(idname);
-        jQuery('span.'+idname).next().find('span').html(filename);
-    });
-    
-    
-    
-    
+    //File Preview
     function filePreview(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -87,19 +72,13 @@ window.addEventListener('load', function(){
                 $('#imagePrev + #divafter').remove();
                 $('#imagePrevEdit + #divafteredit').remove();
                 $('#imageUser + #divafterUserImage').remove();
-                
                 $('#imagePrev').after('<div id="divafter" class="uploadform uploadbutton" style="width=100%"><h2 class="uploadform uploadbutton">Preview</h2><img src="'+e.target.result+'" width="100%"/></div>');
                 $('#imagePrevEdit').after('<div id="divafteredit"class="imagePrevEdit2" style="width=50%"><h2>For this One?</h2><img src="'+e.target.result+'" style="width: 100%; margin: 0px auto; border-radius: 10px;"/></div>');
                 $('#imageUser').after('<div id="divafterUserImage"class="imagePrevEdit2"><h2>For this One?</h2><img src="'+e.target.result+'" style="width: 70%; margin: 0px auto; border-radius: 10px;"/></div>');
             };
         }
     }
-
     $("#image_path").change(function () {
         filePreview(this);
     });
-    
-    
-    
-    
 });

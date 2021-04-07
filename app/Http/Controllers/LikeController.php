@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Like;
 
-class LikeController extends Controller
-{
+class LikeController extends Controller{
     
     public function __construct(){
         $this->middleware('auth');
@@ -24,28 +23,22 @@ class LikeController extends Controller
     
     public function like($image_id){
         
-        //Recoger datos del usuario y la imagen
         $user = \Auth::user();
         
-        //Like existe? y no duplicarlo
         $isset_like = Like::where('user_id', $user->id)
-                            ->where('image_id', $image_id)
-                            ->count();
+                          ->where('image_id', $image_id)
+                          ->count();
         if($isset_like==0){
-        
             $like = new Like();
             $like->user_id = $user->id;
             $like->image_id = (int)$image_id;
-
-            //Guardar
             $like->save();
-            
             return response()->json([
                 'like' => $like
             ]);
         }else{
             return response()->json([
-                'message' => 'Ya habias dado Like'
+                'message' => 'You had already liked'
             ]);
         }
     }
@@ -54,21 +47,18 @@ class LikeController extends Controller
         
         $user = \Auth::user();
         
-        //Like existe? y no duplicarlo
         $like = Like::where('user_id', $user->id)
                             ->where('image_id', $image_id)
                             ->first();
         if($like){
-            //Eliminar like
             $like->delete();
-            
             return response()->json([
                 'like' => $like,
-                'message' => 'Ya no te Gusta'    
+                'message' => 'You do not like it anymore'    
             ]);
         }else{
             return response()->json([
-                'message' => 'El like no existe'
+                'message' => 'The like does not exist'
             ]);
         }
     }

@@ -3,13 +3,12 @@
     <x-slot name="header" >
         Subir Imagen
     </x-slot>
-        
+
     <div class="createtitle">
         Upload image
     </div>
-        
+
     <div class="create-form">
-        
 
         <form method="POST" action="{{route('image.save')}}" enctype="multipart/form-data" id="uploadForm" class="shadow-md px-8 pb-8 form-general">
             <div id="imagePrev" ></div>
@@ -38,7 +37,6 @@
                 </div>
             </div>
 
-
             <div class="form-group row element">
                 <div class="mb-4 uploadform createform">
                     <label class="block text-gray-700 text-sm font-bold mb-2 uploadform describeComment {{$errors->has('content') ? 'is-invalid' : ''}}" for="description">
@@ -60,7 +58,7 @@
                 <input class="button-image-form" type="submit" value="Upload"/>
             </div>
         </form>
-       
+
     </div>
 </x-app-layout>
 

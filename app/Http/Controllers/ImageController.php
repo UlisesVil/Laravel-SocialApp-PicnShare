@@ -11,8 +11,8 @@ use App\Models\Comment;
 use App\Models\Like;
 use App\Models\User;
 
-class ImageController extends Controller
-{
+class ImageController extends Controller{
+
     public function __construct(){
         $this->middleware('auth');
     }
@@ -23,30 +23,26 @@ class ImageController extends Controller
     
     public function save(Request $request){
         
-        //Validacion
         $validate=$this->validate($request,[
             'description' => 'required',
             'image_path' => 'required|image'
         ]);
         
-        //Recoger Datos
         $image_path = $request->file('image_path');
         $description = $request->input('description');
         
-        //Asignar valores nuevo objeto
         $user = \Auth::user();
         
         $image = new Image();
         $image->user_id = $user->id;
         $image->description = $description;
         
-        //Subir fichero
         if($image_path){
             $image_path_name = time().$image_path->getClientOriginalName();
             Storage::disk('images')->put($image_path_name, File::get($image_path));
             $image->image_path = $image_path_name;
         }
-        
+
         $image->save();
         
         return redirect()->route('home.redirect')->with([
@@ -61,7 +57,6 @@ class ImageController extends Controller
     
     public function detail($id){
         $image = Image::find($id);
-        
         return view('image.detail', [
             'image'=> $image
         ]);
@@ -76,30 +71,25 @@ class ImageController extends Controller
         
         if($user && $image->user->id == $user->id){
             
-            //Eliminar comentarios
             if($comments && count($comments) >=1){
                 foreach($comments as $comment){
                     $comment->delete();
                 }
             }
                         
-            //Eliminar los Likes
             if($likes && count($likes) >=1){
                 foreach($likes as $like){
                     $like->delete();
                 }
             }
             
-            //Eliminar ficheros de imagen
             Storage::disk('images')->delete($image->image_path);//Borra el archivo
                         
-            //Eliminar registro de la imagen
             $image->delete();
             $message = array('message' => 'La imagen se ha borrado correctamente');
         }else{
             $message = array('message' => 'La imagen No se ha borrado correctamente');
         }
-        
         return redirect()->route('home.redirect')->with($message);
     }
     
@@ -109,8 +99,8 @@ class ImageController extends Controller
         
         if($user && $image && $image->user->id == $user->id){
             return view('image.edit',[
-                    'image'=>$image
-                    ]);
+                'image'=>$image
+            ]);
         }else{
             return redirect()->route('home.redirect');
         }
@@ -118,29 +108,24 @@ class ImageController extends Controller
     
     public function update(Request $request){
         
-        //Validacion
         $validate=$this->validate($request,[
             'description' => 'required',
             'image_path' => 'image'
         ]);
         
-        //Recoger los datos
         $image_id = $request->input('image_id');
         $image_path = $request->file('image_path');
         $description = $request->input('description');
         
-        //Conseguir Objeto image
         $image = Image::find($image_id);
         $image->description = $description;
         
-        //Subir fichero
         if($image_path){
             $image_path_name = time().$image_path->getClientOriginalName();
             Storage::disk('images')->put($image_path_name, File::get($image_path));
             $image->image_path = $image_path_name;
         }
-        
-        //Actualizar registro
+
         $image->update();
         
         return redirect()->route('image.detail', ['id' => $image_id])
@@ -155,19 +140,15 @@ class ImageController extends Controller
         $id = \Auth::user()->id;
         $user = User::find($id);
         $user_profile_photo=$user->profile_photo_path;
-        var_dump($user_profile_photo);
         
-        //Recoger los datos
         $image_path = $request->file('image_path');
         if($image_path){
             $image_path_name = time().$image_path->getClientOriginalName();
             Storage::disk('userimages')->put($image_path_name, File::get($image_path));
-            var_dump($image_path_name);
             $user->profile_photo_path = $image_path_name;
         }
         
         $user->update();
-        
         return redirect()->route('image.userimage');
     }
     
