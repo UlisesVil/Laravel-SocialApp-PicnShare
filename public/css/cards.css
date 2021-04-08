@@ -1,0 +1,135 @@
+.warn-green{
+    margin-top: 3px;
+    color: green;
+}
+
+.warn-red{
+    margin-top: 3px;
+    color: red;
+}
+
+.is-invalid{
+    color: red;
+    border: 2px solid red;
+}
+
+.cardcontainer{
+    width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    background: #242526;
+    overflow: hidden;
+}
+
+.cardcontainer:hover, .bxShadow:hover{
+    box-shadow: 0px 0px 15px 10px #660000;
+}
+
+.cardcontainerInd{
+    width: 100%;
+    margin-top: 0px;
+    border-radius: 10px;
+    background: #242526;
+}
+
+.cardcontainerIndbottom{
+    width: 100%;
+    margin: 5px auto;
+}
+
+.cardtop{
+    background: #242526;
+    color: white;
+}
+
+.cardtop,
+.cardbottom{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background: #242526;
+}
+
+.cardbottom{
+    width: 100%;
+    background: #242526;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 10px
+}
+
+.cardbottomind{
+    width: 100%;
+    padding: 10px;
+}
+
+hr{
+    border: 1px solid #660033;
+}
+
+.usercard{
+    margin-left: 10px;
+    background: #242526;
+}
+
+.usercardcont{
+    color: white;
+    background: #242526;
+}
+
+.text-sm usercard{
+    margin-left: 10px;
+}
+
+.nickname,.nicknamesecc3{
+    color: white;
+    background: #242526;
+}
+
+.nicknamesecc3{
+    margin-left: 15px;
+}
+
+.mainimage{
+    width: 100%;
+    max-height: 600px;
+}
+
+.mainimageInd{
+    height: auto;
+}
+
+.titlefavs{
+    width: 600px;
+    margin: 0px auto;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.imgzoom{
+    width: 100%;
+    margin: 0px auto;
+    transition: 1s;
+}
+
+.imgzoom:hover{
+    transform: scale(1.5);
+}
+
+
+@media screen and (max-width: 830px){
+
+    .cardcontainerInd{
+       width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+    .cardcontainer,
+    .cardcontainerInd,
+    .titlefavs{
+       width: 90%;
+    }
+}
+

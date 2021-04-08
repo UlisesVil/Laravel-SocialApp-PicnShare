@@ -1,0 +1,37 @@
+.paginate{
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 2px 30px;
+}
+.pag{
+    color: #22f1f4;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.btnpag{
+    background: #000000;
+    color: #22f1f4;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px 15px black, inset 0px 0px 7px 3px #22f1f4;
+    border-radius: 10px;
+    z-index:1;
+}
+
+.manageA{
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.pagesgroup{
+    border: 1px solid #22f1f4;
+}
+
+.pagesgroup:hover, btnpag:hover{
+    background: #22f1f4 !important;
+    color: black !important;
+    box-shadow: 0px 0px 10px 15px black;
+    border-radius: 10px;
+    z-index:2;
+}

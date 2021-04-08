@@ -1,0 +1,51 @@
+.mainText{
+    color: #22f1f4;
+    font-weight: bolder;
+}
+
+.cardheart{
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #242526;
+}
+
+.counterlikes{
+    width: fit-content;
+    margin-right: 5px;
+    font-size: 13px;
+    background: #242526;
+}
+
+.heartlike{
+    display: flex;
+    flex-direction: row;
+    min-width: 100px;
+    width:fit-content;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+    box-sizing: content-box;
+    background: #242526;
+}
+
+.btn-dislike, .btn-like{
+    display: block;
+    width: 30px;
+    float: right;
+    background: #242526;
+    position: relative;
+    top: 0px;
+}
+
+.btn-dislike:hover, .btn-like:hover{
+    width: 33px;
+}
+
+.btn-dislike:active, .btn-like:active{
+    top: 3px;
+}

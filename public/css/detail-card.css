@@ -1,0 +1,101 @@
+
+.cardgen{
+    width: 800px;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+.secc2{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.secc1, .secc2{
+    display: block;
+    width: 100%;
+    background: #242526;
+}
+
+.secc2{
+    width: 100%;
+    background: #242526;
+}
+
+.secc3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding-top: 10px;
+    background: #242526;
+}
+
+.usercardind{
+    float: left;
+    margin-top: 10px;
+    background: #242526;
+}
+
+.imgindcard{
+    float: left;
+    margin: 10px;
+}
+
+.cardcont{
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.busqueda{
+    width: 800px;
+    margin: 20px auto;
+}
+
+.titleg{
+    width: fit-content;
+    font-size: 30px;
+    float: left;
+}
+
+.formsrch{
+    float: right;
+}
+
+.buttonsrch{
+    float: right;
+    margin: 5px 0px;
+}
+
+.btncont{
+    float: right;
+    margin-top: 15px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 830px){
+
+    .secc2{
+       width: 100%;
+    }
+
+    .busqueda{
+       width: 90%;
+    }
+
+    .cardcontainerInd,
+    .image-form,
+    .busqueda{
+       width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+    .btncont{
+      float: none;
+      margin-left: 10px;
+    }
+}
+
+

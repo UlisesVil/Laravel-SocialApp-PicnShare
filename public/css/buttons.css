@@ -1,0 +1,128 @@
+.btncard{
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background: #242526;
+}
+
+.btn{
+    border-radius: 5px;
+    padding: 4px 5px;
+}
+
+.btn-comments,
+.vpbtn,
+.button-image-form,
+label[for="image_path"],
+#search{
+    border-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 5px solid #660033;
+    border-top: 1px solid #660033;
+    border-bottom: 1px solid #660033;
+    border-right: 1px solid #660033;
+    background: #242526;
+    color: #22f1f4;
+    position: relative;
+    top: 0px;
+    outline-style: none;
+    margin-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.btn-comments{
+    position:static;
+}
+
+.button-image-form{
+    margin-left: 30px;
+}
+
+.btncontent{
+    display: flex;
+    flex-direction: column;
+}
+
+.backProf{
+    color: gray;
+    text-shadow:5px 5px 5px white;
+}
+.backProf:hover{
+    color: white;
+    text-shadow:5px 5px 5px white;
+}
+
+.btnuserimg{
+    margin: 10px auto 10px;
+}
+
+.imgBack{
+    display: inline-block;
+    width: 25px;
+    margin-right: 5px;
+}
+
+.imgusercontent{
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn-comments:hover,
+.vpbtn:hover,
+.button-image-form:hover,
+label[for="image_path"]:hover{
+    border-left: 5px solid red;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+    background: #660033;
+    color: white;
+    outline-style: none;
+    box-shadow: 0px 0px 10px #22f1f4;
+    top: -2px;
+}
+
+.btn-comments:active,
+.vpbtn:active,
+.button-image-form:active,
+label[for="image_path"]:active{
+    top: 3px;
+    outline-style: none;
+    box-shadow: 0px 0px 5px #22f1f4;
+}
+
+.btnerase{
+    margin-right: 40px;
+    padding: 4px 20px;
+    font-weight: bolder;
+    color: red;
+    border-color: red;
+}
+
+.btnprof{
+    margin-left: 0px !important;
+    margin-top: 20px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 640px){
+
+    .btncont{
+      float: none;
+      margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 300px){
+
+    .btnerase{
+        padding: 5px 40px;
+        margin: 20px 0px;
+        margin-top: 20px;
+    }
+}

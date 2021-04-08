@@ -1,0 +1,64 @@
+.titledescription{
+    margin-left: 20px;
+    background: #242526;
+    color: white;
+}
+
+.descriptioncard{
+    width: 500px;
+    margin: 0px auto;
+    text-align: justify;
+    background: #242526;
+    color: white;
+}
+
+.members{
+    background: #242526;
+    color: white;
+}
+
+.comentscontent{
+    background: #242526;
+    color: white;
+}
+
+.commentscard{
+    padding: 20px;
+    background: #242526;
+    color: white;
+}
+
+.commentscard h2{
+    background: #242526;
+    color: white;
+}
+
+svg{
+    background: transparent;
+}
+
+#description{
+    width: 90%;
+    height: 150px;
+    text-align: left;
+    margin: auto;
+}
+
+.element{
+    margin: 5px auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.describeComment{
+    margin-bottom: 10px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 830px){
+
+    .descriptioncard{
+       width: 87%;
+    }
+}

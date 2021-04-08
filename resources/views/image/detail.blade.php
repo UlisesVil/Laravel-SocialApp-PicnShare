@@ -13,7 +13,7 @@
                 <img class="h-10 w-10 rounded-full object-cover imgindcard" src="{{route('user.avatar',['filename'=>$image->user->profile_photo_path])}}" alt="<?php echo e(Auth::user()->name); ?>" />
                 @else
                 <img class="h-10 w-10 rounded-full object-cover imgindcard" src="{{ asset('img/avatar.png') }}" alt="{{ Auth::user()->name }}" />
-                @endif              
+                @endif
 
                 <div class="text-sm usercardind">
                     <p class="mainText leading-none usercardcont">{{$image->user->name.' '.$image->user->surname}}
@@ -42,10 +42,10 @@
                         {{count($image->likes)}}
                     </div>
                     <!--Comprobar si el usuario le dio like a la imagen-->
-                    <?php $user_like = false; ?> 
+                    <?php $user_like = false; ?>
                     @foreach($image->likes as $like)
                     @if($like->user->id == Auth::user()->id)
-                    <?php $user_like = true; ?> 
+                    <?php $user_like = true; ?>
                     @endif
                     @endforeach
 
@@ -54,7 +54,7 @@
                     <img src="{{asset('img/heartred.png')}}" data-id="{{$image->id}}" class="btn-dislike"/>
                     @else
                     <img src="{{asset('img/heartgray.png')}}" data-id="{{$image->id}}" class="btn-like"/>
-                    @endif    
+                    @endif
                 </div>
             </div>
 
@@ -64,7 +64,7 @@
                         <div class="text-white-900 font-bold text-xl mb-2 titledescription">{{$image->user->name.' '.$image->user->surname}} say:</div>
                         <p class="text-white-700 text-base descriptioncard">{{$image->description}}</p>
                     </div>
-                    
+
                     @if(Auth::user() && Auth::user()->id == $image->user->id)
                     <div class="actions uploadform mainText">
                         <a href="{{ route('image.edit',['id' => $image->id]) }}" class="btn btn-warning updateText">Update</a>
@@ -74,7 +74,7 @@
                     @endif
 
                     <div class="clearfix"></div>
-                    
+
                     <div class="commentscard">
                         <h2>Comment Something:</h2>
                         <hr/>
@@ -90,9 +90,9 @@
                                 @endif
                             </p>
                             <button type="submit" class="btn-comments">
-                                Send                                
+                                Send
                             </button>
-                        </form>    
+                        </form>
                     </div>
 
                     <h3 class="mainText">
@@ -118,6 +118,6 @@
                     @endforeach
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 </x-app-layout>

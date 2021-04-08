@@ -1,0 +1,68 @@
+.commentp{
+    margin-left: 30px;
+}
+
+.deletecomment{
+    width: 60px;
+    color: red;
+    position: relative;
+    top: 0px;
+}
+
+.deletecomment:hover{
+    text-shadow: 0px 0px 10px red;
+    top: -3px;
+}
+
+.deletecomment:active{
+    top: -1px;
+}
+
+.updateText{
+    position: relative;
+    width: 60px;
+    color: #22f1f4;
+    top: 0px;
+}
+
+.updateText:hover{
+    text-shadow: 0px 0px 10px #22f1f4;
+    top: -3px;
+}
+
+.updateText:active{
+    top: -1px;
+}
+
+h3, .ptextarea, .uploadform{
+    background: #242526;
+    color: white;
+}
+
+.ptextarea{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.edittext{
+    width: 80%;
+    background: #242526;
+}
+
+.form-control{
+    color: white;
+    border: 3px solid #3333;
+    border-radius: 5px;
+}
+
+.button-comments{
+    background: orangered;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-left: 0px;
+}

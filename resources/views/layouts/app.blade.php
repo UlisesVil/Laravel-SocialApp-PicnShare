@@ -12,6 +12,16 @@
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/comments-section.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/cards.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/likes.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/description-card.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/profile-image-header.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/detail-card.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 
         @livewireStyles
 

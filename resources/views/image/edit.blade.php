@@ -2,7 +2,7 @@
     <div class="edittitle">
         Edit image
     </div>
-    
+
     <div class="image-formEdit">
         <form method="POST" action="{{ route('image.update') }}" enctype="multipart/form-data" class="shadow-md px-8 pb-8 form-general">
             @csrf
@@ -27,8 +27,8 @@
                             </span>
                         </div>
                     </label>
-                </div>  
-                
+                </div>
+
                 <div class="mt-2 element">
                     @if($errors->has('image_path'))
                     <span class="invalid-feedback warn-red">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="flex items-center justify-between uploadform">
-                <input class="button-image-form" type="submit" value="Update Image"/>
+                <input class="button-image-form" type="submit" value="Save"/>
             </div>
         </form>
     </div>
