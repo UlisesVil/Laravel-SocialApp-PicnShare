@@ -1,15 +1,15 @@
 
-var url= 'http://proyecto-laravel.com.devel';
-//var url= 'http://ulises-social-app.atwebpages.com';
+//var url= 'http://proyecto-laravel.com.devel';
+var url= 'http://ulises-social-app.atwebpages.com';
 
 window.addEventListener('load', function(){
-    
+
     $('.btn-like').css('cursor','pointer');
     $('.btn-dislike').css('cursor','pointer');
-    
+
     //Like Button
     function like(){
-        
+
         $('.btn-like').unbind('click').click(function(){
             $(this).addClass('btn-dislike').removeClass('btn-like');
             $(this).attr('src', url+'/img/heartred.png');
@@ -28,7 +28,7 @@ window.addEventListener('load', function(){
         });
     }
     like();
-    
+
     //Dislike Button
     function dislike(){
 
@@ -50,7 +50,7 @@ window.addEventListener('load', function(){
         });
     }
     dislike();
-    
+
     //Search
     $('#buscador').submit(function(e){
         $(this).attr('action',url+'/gente/'+$('#buscador #search').val());
@@ -62,7 +62,7 @@ window.addEventListener('load', function(){
         var idname = $(this).attr('id');
         $('span.'+idname).next().find('span').html(filename);
     });
-    
+
     //File Preview
     function filePreview(input) {
         if (input.files && input.files[0]) {

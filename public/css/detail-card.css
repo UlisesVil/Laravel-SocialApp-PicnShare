@@ -1,6 +1,6 @@
-
 .cardgen{
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin: 0px auto;
     margin-top: 30px;
 }
@@ -79,12 +79,6 @@
        width: 100%;
     }
 
-    .busqueda{
-       width: 90%;
-    }
-
-    .cardcontainerInd,
-    .image-form,
     .busqueda{
        width: 90%;
     }

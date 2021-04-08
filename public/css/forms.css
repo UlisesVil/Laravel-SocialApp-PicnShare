@@ -147,6 +147,21 @@ label[for="image_path"] {
     background: black;
 }
 
+@media screen and (max-width: 830px){
+
+    .image-form{
+       width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+    .image-formEdit{
+       width: 90%;
+    }
+}
+
+
 @media screen and (max-width: 470px){
 
     .imageuser-form{
@@ -156,4 +171,5 @@ label[for="image_path"] {
         width: 300px;
     }
 }
+
 
