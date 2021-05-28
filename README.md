@@ -1,61 +1,33 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Pick n Share Social App (Laravel).
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Application made with Laravel (PHP) and MySQL is fully Responsive and is available on the web.
 
-## About Laravel
+The users can sign up to create an account, and then they can log in.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+User data and activity will store in the database with their encrypted password.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+In a new account, the user will have a default image in his profile which the users can change to the image they like.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+When you log in, the main page is showed with the publications that other users have made, showing the most recent ones first.
 
-## Learning Laravel
+This application has pagination, showing five publications per page.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Publications will show the number of likes and the number of comments it has received, and the heart will remain red if the user has already liked it or gray if they have not clicked on it yet.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Any publication that users have made can edit or delete. If the user chooses to delete some publication, a modal will pop up to ask for confirmation.
 
-## Laravel Sponsors
+The user can enter any publication to add a comment and can later edit or delete.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+The community section lists the users registered in the app showing their profile image, their name, nickname, since when they have been members, and a button that shows only the publications from that user has made.
 
-### Premium Partners
+In the favorites section, the users will see only the publications of other users and his own that he has given like, if they click on the favorite button with a red heart shape again, it will change to gray. The publication is going to be deleted from this list the next time the user enters this section.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+The Upload Image option will allow users to prepare and upload a publication. In this view, they will see a preview of their image, and they can add a comment or description so that the community can see it.
 
-## Contributing
+The upload image button is customized. When users choose the image to upload, the button's text will change to the image name file they have already chosen.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+In the option: My posts, the user can see only the publications he has made.
 
-## Code of Conduct
+In the option profile. The users can see their personal information and edit it if they wish, also their image profile. When they change their image, the user will be able to view his old image and the new image that he has selected to replace the previous one, and the upload button image will change its text to the name of the new image the user has chosen.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Visit the site here: http://ulises-social-app.atwebpages.com
